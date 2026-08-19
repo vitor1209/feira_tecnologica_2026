@@ -1,0 +1,308 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f2ec;
+}
+
+
+/* =========================
+   CONTAINER DOS PROJETOS
+========================= */
+
+.projetos-container {
+    width: 100%;
+    padding: 30px;
+}
+
+
+/* =========================
+   LISTA DE CARDS
+========================= */
+
+#lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
+    gap: 30px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card-projeto {
+    width: 350px;
+    height: 370px;
+
+    background-color: #ffffff;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+/* Pequeno efeito ao passar o mouse */
+
+.card-projeto:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   ÁREA DA IMAGEM
+========================= */
+
+.card-imagem-container {
+    position: relative;
+
+    width: 100%;
+    height: 160px;
+
+    background-color: #d3d3d3;
+
+    flex-shrink: 0;
+}
+
+
+.card-imagem {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   ODS
+========================= */
+
+.card-ods {
+    position: absolute;
+
+    top: 20px;
+    right: 23px;
+
+    display: flex;
+    gap: 8px;
+
+    z-index: 2;
+}
+
+
+/* Cada tag individual */
+
+.ods-tag {
+    height: 20px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* Cores das ODS */
+
+.ods-1  { background-color: #e5243b; }
+.ods-2  { background-color: #dda63a; }
+.ods-3  { background-color: #4c9f38; }
+.ods-4  { background-color: #c5192d; }
+.ods-5  { background-color: #ff3a21; }
+.ods-6  { background-color: #26bde2; }
+.ods-7  { background-color: #fcc30b; }
+.ods-8  { background-color: #a21942; }
+.ods-9  { background-color: #fd6925; }
+.ods-10 { background-color: #dd1367; }
+.ods-11 { background-color: #fd9d24; }
+.ods-12 { background-color: #bf8b2e; }
+.ods-13 { background-color: #3f7e44; }
+.ods-14 { background-color: #0a97d9; }
+.ods-15 { background-color: #56c02b; }
+.ods-16 { background-color: #00689d; }
+.ods-17 { background-color: #19486a; }
+
+
+/* =========================
+   CONTEÚDO DO CARD
+========================= */
+
+.card-conteudo {
+    height: 210px;
+
+    padding: 12px 41px 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.card-titulo {
+    color: #111111;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   SUBTÍTULO
+========================= */
+
+.card-subtitulo {
+    color: #333333;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    margin-bottom: 13px;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.card-descricao {
+    color: #333333;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+
+.card-localizacao {
+    color: #333333;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    display: flex;
+    gap: 20px;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.card-botao {
+    width: 224px;
+    height: 41px;
+
+    margin: auto auto 0;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #5b2875;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+
+.card-botao:hover {
+    background-color: #4b2161;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 400px) {
+
+    .projetos-container {
+        padding: 20px;
+    }
+
+    #lista-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-projeto {
+        width: 100%;
+    }
+
+    .card-conteudo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .card-botao {
+        width: 100%;
+    }
+}
