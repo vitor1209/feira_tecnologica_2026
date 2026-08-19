@@ -1,0 +1,17 @@
+body{
+    background:#f5f3ee;
+    font-family:Poppins;
+}
+
+.pagina-projetos{
+    padding:40px;
+}
+
+.grid-projetos{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+}
