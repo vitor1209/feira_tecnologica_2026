@@ -7,14 +7,26 @@
 
     <title>Projetos</title>
 
+    <!-- Componentes -->
     <link rel="stylesheet" href="../../components/Card/Card.css">
+    <link rel="stylesheet" href="../../components/OdsTag/OdsTag.css">
+
+    <!-- Página -->
     <link rel="stylesheet" href="./Projetos.css">
+
+    <!-- CSS global -->
     <link rel="stylesheet" href="../../index.css">
 
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -22,12 +34,69 @@
 
     <main class="pagina-projetos">
 
+        <!-- CABEÇALHO -->
+        <section class="cabecalho-projetos">
+
+            <p class="breadcrumb">
+                Home <span>›</span> Projetos
+            </p>
+
+            <h1>Projetos da Feira</h1>
+
+            <p class="descricao-projetos">
+                Mais de 30 projetos disponíveis para visita e avaliação.
+            </p>
+
+        </section>
+
+
+        <!-- BUSCA -->
+        <section class="area-filtros">
+
+            <div class="barra-busca">
+
+                <span class="icone-busca">⌕</span>
+
+                <input type="text" id="busca-projetos" placeholder="Buscar projetos, cursos ou salas...">
+
+            </div>
+
+
+            <!-- FILTROS -->
+            <div class="filtros">
+
+                <button class="filtro">
+                    <span>Todas as ODS</span>
+                    <span class="seta">↓</span>
+                </button>
+
+                <button class="filtro">
+                    <span>Todos os cursos</span>
+                    <span class="seta">↓</span>
+                </button>
+
+                <button class="filtro">
+                    <span>Todas as salas</span>
+                    <span class="seta">↓</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJETOS -->
         <section class="grid-projetos" id="lista-projetos">
         </section>
 
     </main>
 
+
+    <!-- COMPONENTES -->
+    <script src="../../components/OdsTag/OdsTag.js"></script>
     <script src="../../components/Card/Card.js"></script>
+
+    <!-- PÁGINA -->
     <script src="./Projetos.js"></script>
 
 </body>

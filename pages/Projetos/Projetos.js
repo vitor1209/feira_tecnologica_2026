@@ -24,8 +24,12 @@ const projetos = [
 
 ];
 
+
 const container = document.getElementById("lista-projetos");
 
+
 projetos.forEach(projeto => {
+
     container.innerHTML += criarCard(projeto);
+
 });

@@ -1,17 +1,3 @@
-function criarODS(numero) {
-    return `
-        <span class="ods-tag ods-${numero}">
-            ODS ${numero}
-        </span>
-    `;
-}
-
-function criarListaODS(listaODS) {
-    return listaODS
-        .map(ods => criarODS(ods))
-        .join("");
-}
-
 function criarCard(projeto) {
 
     return `
@@ -31,6 +17,7 @@ function criarCard(projeto) {
 
             </div>
 
+
             <div class="card-conteudo">
 
                 <h2 class="card-titulo">
@@ -46,11 +33,21 @@ function criarCard(projeto) {
                 </p>
 
                 <div class="card-local">
-                    <span>Sala: ${projeto.sala}</span>
-                    <span>Bloco: ${projeto.bloco}</span>
+
+                    <span>
+                        Sala: ${projeto.sala}
+                    </span>
+
+                    <span>
+                        Bloco: ${projeto.bloco}
+                    </span>
+
                 </div>
 
-                <a href="${projeto.link}" class="card-botao">
+                <a
+                    href="${projeto.link}"
+                    class="card-botao"
+                >
                     Ver detalhes
                 </a>
 

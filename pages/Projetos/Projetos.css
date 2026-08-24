@@ -1,17 +1,227 @@
-body{
-    background:#f5f3ee;
-    font-family:Poppins;
+body {
+    margin: 0;
+    background: #f5f3ee;
+    font-family: "Afacad", sans-serif;
+    color: #30123d;
 }
 
-.pagina-projetos{
-    padding:40px;
+
+/* ============================= */
+/* PÁGINA */
+/* ============================= */
+
+.pagina-projetos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 26px 60px;
 }
 
-.grid-projetos{
-    display:grid;
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+.cabecalho-projetos {
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    color: #777;
+}
+
+.breadcrumb span {
+    margin: 0 4px;
+}
+
+.cabecalho-projetos h1 {
+    margin: 0;
+
+    font-family: "Ubuntu", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+
+    color: #3d1450;
+}
+
+.descricao-projetos {
+    max-width: 550px;
+
+    margin: 8px 0 0;
+
+    font-size: 20px;
+    line-height: 1.2;
+
+    color: #4d3156;
+}
+
+
+/* ============================= */
+/* ÁREA DE FILTROS */
+/* ============================= */
+
+.area-filtros {
+    margin-bottom: 48px;
+}
+
+
+/* ============================= */
+/* BUSCA */
+/* ============================= */
+
+.barra-busca {
+    width: min(100%, 335px);
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+.icone-busca {
+    margin-right: 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 27px;
+    line-height: 1;
+
+    color: #351247;
+
+    transform: rotate(-20deg);
+}
+
+.barra-busca input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 15px;
+
+    color: #333;
+}
+
+.barra-busca input::placeholder {
+    color: #8a8a8a;
+}
+
+
+/* ============================= */
+/* FILTROS */
+/* ============================= */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 23px;
+}
+
+.filtro {
+    min-width: 160px;
+    height: 43px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #444;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 15px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.14);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.filtro:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.seta {
+    font-size: 22px;
+    color: #333;
+}
+
+
+/* ============================= */
+/* GRID DE PROJETOS */
+/* ============================= */
+
+.grid-projetos {
+    display: grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(350px,1fr));
+        repeat(auto-fit, minmax(350px, 350px));
 
-    gap:30px;
+    justify-content: start;
+
+    gap: 30px;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .pagina-projetos {
+        padding: 25px 15px 50px;
+    }
+
+    .cabecalho-projetos h1 {
+        font-size: 32px;
+    }
+
+    .descricao-projetos {
+        font-size: 18px;
+    }
+
+    .barra-busca {
+        width: 100%;
+    }
+
+    .filtro {
+        min-width: 160px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+
 }

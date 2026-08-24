@@ -1,94 +1,145 @@
-.card-projeto{
-    width:350px;
-    background:white;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,0.15);
-    display:flex;
-    flex-direction:column;
+.card-projeto {
+    width: 350px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    flex-direction: column;
 }
 
-.card-imagem-container{
-    position:relative;
-    height:170px;
-    background:#d9d9d9;
+
+/* ============================= */
+/* IMAGEM */
+/* ============================= */
+
+.card-imagem-container {
+    position: relative;
+
+    height: 160px;
+
+    background: #d9d9d9;
+
+    overflow: hidden;
 }
 
-.card-imagem{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.card-imagem {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
 }
 
-.card-ods{
-    position:absolute;
-    top:18px;
-    right:18px;
-    display:flex;
-    gap:8px;
+
+/* ============================= */
+/* ODS */
+/* ============================= */
+
+.card-ods {
+    position: absolute;
+
+    top: 19px;
+    right: 18px;
+
+    display: flex;
+
+    gap: 8px;
 }
 
-.ods-tag{
-    padding:5px 12px;
-    border-radius:20px;
-    color:white;
-    font-size:10px;
-    font-weight:600;
+
+/* ============================= */
+/* CONTEÚDO */
+/* ============================= */
+
+.card-conteudo {
+    min-height: 210px;
+
+    padding: 16px 41px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
 }
 
-.ods-4{
-    background:#c5192d;
+.card-titulo {
+    margin: 0;
+
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #111;
 }
 
-.ods-9{
-    background:#fd6925;
+.card-subtitulo {
+    margin: 2px 0 15px;
+
+    font-size: 18px;
+
+    color: #444;
 }
 
-.card-conteudo{
-    padding:20px 40px;
-    display:flex;
-    flex-direction:column;
-    flex:1;
+.card-curso {
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #333;
 }
 
-.card-titulo{
-    font-size:28px;
-    font-weight:700;
-    color:#121212;
+.card-local {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    font-size: 17px;
+
+    color: #333;
 }
 
-.card-subtitulo{
-    font-size:18px;
-    color:#444;
-    margin-bottom:20px;
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+.card-botao {
+    margin-top: auto;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    background: #5f2d79;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.2s;
 }
 
-.card-curso{
-    font-size:18px;
-    color:#333;
-}
+.card-botao:hover {
+    background: #4d2165;
 
-.card-local{
-    display:flex;
-    gap:20px;
-    margin-top:5px;
-    margin-bottom:25px;
-}
-
-.card-botao{
-    margin-top:auto;
-
-    background:#5f2d79;
-    color:white;
-
-    text-decoration:none;
-
-    height:42px;
-    border-radius:30px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-weight:600;
+    transform: translateY(-1px);
 }
