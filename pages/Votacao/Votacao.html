@@ -1,16 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../index.css">
-
-    <title>Votacao</title>
+    <title>Feira Tecnológica Etec MCM 2026</title>
+    <link rel="stylesheet" href="Votacao.css">
 </head>
 
+<!--Mudar as fonts;
+fazer o menu;
+Modal. -->
+
+
+
 <body>
-    Votacao
+
+    <div class="app">
+
+
+        <header class="header">
+        
+        
+        </header>
+
+        <div class="back-link-wrap">
+           <a href="../Projetos/Projetos.html" >  <button class="back-link" id="backLinkBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Voltar para projetos
+            </button> </a>
+        </div>
+
+
+        <div class="title-wrap">
+            <h1 class="page-title">Feira Tecnológica<br>Etec MCM 2026</h1>
+        </div>
+
+
+        <main class="card">
+
+            <div class="project-head">
+                <h2 class="project-name">Nome do projeto</h2>
+                <p class="project-subtitle">Subtítulo do projeto</p>
+
+                <div class="tags">
+                    <span class="tag tag-red">ODS 4 - Educação de qualidade</span>
+                    <span class="tag tag-green">ODS 15 - Vida terrestre</span>
+                </div>
+            </div>
+
+            <button class="vote-box" id="voteBtn">
+                <p class="vote-title">Já visitou este estante?</p>
+                <p class="vote-subtitle">Deixe sua curtida se gostou do projeto!</p>
+                <svg id="thumbIcon" class="thumb-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 10v12"></path>
+                    <path
+                        d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z">
+                    </path>
+                </svg>
+            </button>
+
+            <hr class="divider">
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <p class="info-label">Curso</p>
+                    <p class="info-value">Informática para Internet</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Turma</p>
+                    <p class="info-value">3°C</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Local</p>
+                    <p class="info-value">Sala: 2A &bull; Bloco: A</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Orientador(a)</p>
+                    <p class="info-value">Prof. Edilma Bindá</p>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <section class="about">
+                <p class="section-label">Sobre o projeto</p>
+                <p class="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </section>
+
+            <section class="members">
+                <p class="section-label">Integrantes</p>
+                <div class="chips" id="membersList">
+                    <span class="chip">Fulano de tal</span>
+                    <span class="chip">Fulano de tal</span>
+                    <span class="chip">Fulano de tal</span>
+                    <span class="chip">Fulano de tal</span>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Fechar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div class="modal-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 10v12"></path>
+                    <path
+                        d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z">
+                    </path>
+                </svg>
+            </div>
+
+            <h3 class="modal-title">Curtida enviada!</h3>
+            <p class="modal-text">Obrigado por visitar o estante e apoiar este projeto.</p>
+
+            <button class="modal-btn" id="modalOkBtn">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
