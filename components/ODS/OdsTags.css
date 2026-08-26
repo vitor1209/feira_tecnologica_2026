@@ -1,94 +1,45 @@
 .ods-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    min-width: 42px;
-
-    padding: 4px 10px;
+    padding: 3px 6px;
 
     border-radius: 20px;
 
     color: #ffffff;
 
-    font-family: "Afacad", sans-serif;
-    font-size: 11px;
+    font-size: 6px;
+
     font-weight: 700;
 
     line-height: 1;
 
-    box-sizing: border-box;
+    white-space: nowrap;
+
 }
 
-
-/* ============================= */
-/* CORES DAS ODS */
-/* ============================= */
-
-.ods-1 {
-    background: #e5243b;
-}
-
-.ods-2 {
-    background: #dda63a;
-}
-
-.ods-3 {
-    background: #4c9f38;
-}
 
 .ods-4 {
+
     background: #c5192d;
+
 }
 
-.ods-5 {
-    background: #ff3a21;
-}
-
-.ods-6 {
-    background: #26bde2;
-}
-
-.ods-7 {
-    background: #fcc30b;
-}
-
-.ods-8 {
-    background: #a21942;
-}
 
 .ods-9 {
+
     background: #fd6925;
+
 }
 
-.ods-10 {
-    background: #dd1367;
-}
 
 .ods-11 {
+
     background: #fd9d24;
+
 }
+
 
 .ods-12 {
+
     background: #bf8b2e;
-}
 
-.ods-13 {
-    background: #3f7e44;
-}
-
-.ods-14 {
-    background: #0a97d9;
-}
-
-.ods-15 {
-    background: #56c02b;
-}
-
-.ods-16 {
-    background: #00689d;
-}
-
-.ods-17 {
-    background: #19486a;
 }

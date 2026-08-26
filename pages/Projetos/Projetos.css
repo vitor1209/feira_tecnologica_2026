@@ -1,8 +1,13 @@
+/* ============================= */
+/* GERAL */
+/* ============================= */
+
 body {
+
     margin: 0;
-    background: #f5f3ee;
     font-family: "Afacad", sans-serif;
     color: #30123d;
+
 }
 
 
@@ -11,9 +16,13 @@ body {
 /* ============================= */
 
 .pagina-projetos {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 28px 26px 60px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 24px 14px 45px;
+
 }
 
 
@@ -22,206 +31,308 @@ body {
 /* ============================= */
 
 .cabecalho-projetos {
-    margin-bottom: 30px;
+
+    margin-bottom: 20px;
+
 }
+
 
 .breadcrumb {
-    margin: 0 0 5px;
 
-    font-size: 18px;
+    margin: 0 0 3px;
+
+    font-size: 14px;
+
     color: #777;
+
 }
+
 
 .breadcrumb span {
-    margin: 0 4px;
+
+    margin: 0 3px;
+
 }
 
+
 .cabecalho-projetos h1 {
+
     margin: 0;
 
     font-family: "Ubuntu", sans-serif;
-    font-size: 36px;
+
+    font-size: 30px;
+
+    line-height: 1.1;
+
     font-weight: 700;
 
     color: #3d1450;
+
 }
 
+
 .descricao-projetos {
-    max-width: 550px;
 
-    margin: 8px 0 0;
+    width: 230px;
 
-    font-size: 20px;
-    line-height: 1.2;
+    margin: 5px 0 0;
+
+    font-size: 15px;
+
+    line-height: 1.15;
 
     color: #4d3156;
+
 }
 
 
 /* ============================= */
-/* ÁREA DE FILTROS */
+/* ÁREA DOS FILTROS */
 /* ============================= */
 
 .area-filtros {
-    margin-bottom: 48px;
-}
 
-
-/* ============================= */
-/* BUSCA */
-/* ============================= */
-
-.barra-busca {
-    width: min(100%, 335px);
-    height: 52px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 18px;
-
-    background: #ffffff;
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.15);
-
-    box-sizing: border-box;
-}
-
-.icone-busca {
-    margin-right: 18px;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 27px;
-    line-height: 1;
-
-    color: #351247;
-
-    transform: rotate(-20deg);
-}
-
-.barra-busca input {
     width: 100%;
+    margin-bottom: 35px;
 
-    border: none;
-    outline: none;
-
-    background: transparent;
-
-    font-family: "Afacad", sans-serif;
-    font-size: 15px;
-
-    color: #333;
 }
 
-.barra-busca input::placeholder {
-    color: #8a8a8a;
-}
 
+/* ============================= */
+/* SEARCHBAR */
+/* ============================= */
+
+.container-searchbar {
+
+    width: 100%;
+    max-width: 335px;
+
+}
 
 /* ============================= */
 /* FILTROS */
 /* ============================= */
 
 .filtros {
-    display: flex;
-    flex-wrap: wrap;
 
-    gap: 12px;
+    width: 100%;
 
-    margin-top: 23px;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    margin-top: 8px;
+
+}
+
+
+/* ============================= */
+/* DROPDOWN */
+/* ============================= */
+
+.dropdown {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+/* CURSO OCUPA A LINHA TODA */
+
+.dropdown-curso {
+
+    grid-column: 1 / 3;
+
+}
+
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+.filtrocurso {    
+
+
 }
 
 .filtro {
-    min-width: 160px;
-    height: 43px;
 
-    padding: 0 18px;
+    width: 100%;
+
+    height: 35px;
+
+    box-sizing: border-box;
+
+    padding: 0 8px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 5px;
 
     border: none;
-    border-radius: 25px;
+
+    border-radius: 20px;
 
     background: #ffffff;
 
     color: #444;
 
     font-family: "Afacad", sans-serif;
+
     font-size: 15px;
 
+    white-space: nowrap;
+
     box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.14);
+        0 1px 3px rgba(0, 0, 0, 0.14);
 
     cursor: pointer;
 
-    transition: 0.2s;
 }
 
-.filtro:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.16);
+.texto-filtro{
+    background-color: #ffffff;
 }
 
 .seta {
-    font-size: 22px;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+
+    line-height: 1;
+
     color: #333;
+
+    transition: transform 0.2s;
+
+}
+
+
+.dropdown.aberto .seta {
+
+    transform: rotate(180deg);
+
 }
 
 
 /* ============================= */
-/* GRID DE PROJETOS */
+/* OPÇÕES DO DROPDOWN */
+/* ============================= */
+
+.opcoes-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 4px);
+
+    left: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 4px;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.18);
+
+    z-index: 100;
+
+}
+
+
+.dropdown.aberto .opcoes-dropdown {
+
+    display: flex;
+
+}
+
+
+.opcoes-dropdown button {
+
+    width: 100%;
+
+    padding: 5px 6px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #444;
+
+    font-family: "Afacad", sans-serif;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.opcoes-dropdown button:hover {
+
+    background: #f0e9f3;
+
+    color: #55286f;
+
+}
+
+
+/* ============================= */
+/* GRID DOS CARDS */
 /* ============================= */
 
 .grid-projetos {
+
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(350px, 350px));
+    grid-template-columns: 168px;
 
     justify-content: start;
 
-    gap: 30px;
+    gap: 20px;
+
 }
 
 
 /* ============================= */
-/* RESPONSIVIDADE */
+/* NENHUM PROJETO */
 /* ============================= */
 
-@media (max-width: 600px) {
+.nenhum-projeto {
 
-    .pagina-projetos {
-        padding: 25px 15px 50px;
-    }
+    margin: 0;
 
-    .cabecalho-projetos h1 {
-        font-size: 32px;
-    }
+    font-size: 11px;
 
-    .descricao-projetos {
-        font-size: 18px;
-    }
-
-    .barra-busca {
-        width: 100%;
-    }
-
-    .filtro {
-        min-width: 160px;
-    }
-
-    .grid-projetos {
-        grid-template-columns: 1fr;
-    }
+    color: #6b586f;
 
 }

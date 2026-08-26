@@ -4,21 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Projetos</title>
 
-    <!-- Componentes -->
     <link rel="stylesheet" href="../../components/Card/Card.css">
     <link rel="stylesheet" href="../../components/OdsTag/OdsTag.css">
-
-    <!-- Página -->
+    <link rel="stylesheet" href="../../components/SearchBar/SearchBar.css">
     <link rel="stylesheet" href="./Projetos.css">
-
-    <!-- CSS global -->
     <link rel="stylesheet" href="../../index.css">
 
-    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
@@ -34,7 +29,6 @@
 
     <main class="pagina-projetos">
 
-        <!-- CABEÇALHO -->
         <section class="cabecalho-projetos">
 
             <p class="breadcrumb">
@@ -49,54 +43,132 @@
 
         </section>
 
-
-        <!-- BUSCA -->
         <section class="area-filtros">
 
-            <div class="barra-busca">
+            <div id="barra-busca"></div>
 
-                <span class="icone-busca">⌕</span>
+            <div class="filtrocurso">
+                <div class="dropdown" id="dropdown-curso">
 
-                <input type="text" id="busca-projetos" placeholder="Buscar projetos, cursos ou salas...">
+                    <button class="filtro" type="button">
 
+                        <span class="texto-filtro">
+                            Todos os cursos
+                        </span>
+
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todos os cursos
+                        </button>
+
+                        <button type="button" data-valor="Informática para Internet">
+                            Informática para Internet
+                        </button>
+
+                        <button type="button" data-valor="Administração">
+                            Administração
+                        </button>
+
+                    </div>
+
+                </div>
             </div>
 
 
-            <!-- FILTROS -->
             <div class="filtros">
 
-                <button class="filtro">
-                    <span>Todas as ODS</span>
-                    <span class="seta">↓</span>
-                </button>
+                <div class="dropdown" id="dropdown-ods">
 
-                <button class="filtro">
-                    <span>Todos os cursos</span>
-                    <span class="seta">↓</span>
-                </button>
+                    <button class="filtro" type="button">
 
-                <button class="filtro">
-                    <span>Todas as salas</span>
-                    <span class="seta">↓</span>
-                </button>
+                        <span class="texto-filtro">
+                            Todas as ODS
+                        </span>
 
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todas as ODS
+                        </button>
+
+                        <button type="button" data-valor="4">
+                            ODS 4
+                        </button>
+
+                        <button type="button" data-valor="9">
+                            ODS 9
+                        </button>
+
+                        <button type="button" data-valor="11">
+                            ODS 11
+                        </button>
+
+                        <button type="button" data-valor="12">
+                            ODS 12
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="dropdown-sala">
+                    <button class="filtro" type="button">
+
+                        <span class="texto-filtro">
+                            Todas as salas
+                        </span>
+
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todas as salas
+                        </button>
+
+                        <button type="button" data-valor="2A">
+                            Sala 2A
+                        </button>
+
+                        <button type="button" data-valor="3B">
+                            Sala 3B
+                        </button>
+
+                    </div>
+                </div>
             </div>
 
         </section>
 
-
-        <!-- PROJETOS -->
         <section class="grid-projetos" id="lista-projetos">
         </section>
 
     </main>
 
 
-    <!-- COMPONENTES -->
     <script src="../../components/OdsTag/OdsTag.js"></script>
+
     <script src="../../components/Card/Card.js"></script>
 
-    <!-- PÁGINA -->
+    <script src="../../components/SearchBar/SearchBar.js"></script>
+
     <script src="./Projetos.js"></script>
 
 </body>

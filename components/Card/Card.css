@@ -1,17 +1,24 @@
+/* ============================= */
+/* CARD */
+/* ============================= */
+
 .card-projeto {
-    width: 350px;
+
+    width: 168px;
 
     background: #ffffff;
 
-    border-radius: 30px;
+    border-radius: 18px;
 
     overflow: hidden;
 
     box-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.18);
+        0 2px 5px rgba(0, 0, 0, 0.18);
 
     display: flex;
+
     flex-direction: column;
+
 }
 
 
@@ -20,22 +27,29 @@
 /* ============================= */
 
 .card-imagem-container {
+
     position: relative;
 
-    height: 160px;
+    width: 100%;
+
+    height: 79px;
 
     background: #d9d9d9;
 
     overflow: hidden;
+
 }
 
+
 .card-imagem {
+
     width: 100%;
     height: 100%;
 
     display: block;
 
     object-fit: cover;
+
 }
 
 
@@ -44,14 +58,17 @@
 /* ============================= */
 
 .card-ods {
+
     position: absolute;
 
-    top: 19px;
-    right: 18px;
+    top: 9px;
+
+    right: 8px;
 
     display: flex;
 
-    gap: 8px;
+    gap: 4px;
+
 }
 
 
@@ -60,54 +77,79 @@
 /* ============================= */
 
 .card-conteudo {
-    min-height: 210px;
 
-    padding: 16px 41px 16px;
+    min-height: 107px;
+
+    padding: 8px 20px 9px;
 
     display: flex;
+
     flex-direction: column;
 
     box-sizing: border-box;
+
 }
 
+
 .card-titulo {
+
     margin: 0;
 
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 20px;
+    font-size: 11px;
+
+    line-height: 1.1;
+
     font-weight: 700;
 
     color: #111;
+
 }
+
 
 .card-subtitulo {
-    margin: 2px 0 15px;
 
-    font-size: 18px;
+    margin: 2px 0 8px;
+
+    font-size: 9px;
+
+    line-height: 1.1;
 
     color: #444;
+
 }
+
 
 .card-curso {
+
     margin: 0;
 
-    font-size: 17px;
+    font-size: 9px;
+
+    line-height: 1.1;
 
     color: #333;
+
 }
 
+
 .card-local {
+
     display: flex;
 
-    gap: 20px;
+    gap: 10px;
 
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-top: 2px;
 
-    font-size: 17px;
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    line-height: 1.1;
 
     color: #333;
+
 }
 
 
@@ -116,15 +158,20 @@
 /* ============================= */
 
 .card-botao {
+
     margin-top: auto;
 
-    height: 40px;
+    width: 100%;
+
+    height: 20px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    border-radius: 25px;
+    border-radius: 20px;
 
     background: #5f2d79;
 
@@ -132,14 +179,8 @@
 
     text-decoration: none;
 
-    font-size: 16px;
+    font-size: 9px;
+
     font-weight: 600;
 
-    transition: 0.2s;
-}
-
-.card-botao:hover {
-    background: #4d2165;
-
-    transform: translateY(-1px);
 }
