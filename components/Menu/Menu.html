@@ -11,13 +11,22 @@
 </head>
 <body>
     <nav>
-        <div>
-            <svg width="48" height="48" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="25" fill="#E8DFF5"/>
-                <path d="M35.6666 35V32.3333C35.6666 30.9188 35.1047 29.5623 34.1045 28.5621C33.1043 27.5619 31.7477 27 30.3333 27H19.6666C18.2521 27 16.8955 27.5619 15.8953 28.5621C14.8952 29.5623 14.3333 30.9188 14.3333 32.3333V35M30.3333 16.3333C30.3333 19.2789 27.9454 21.6667 24.9999 21.6667C22.0544 21.6667 19.6666 19.2789 19.6666 16.3333C19.6666 13.3878 22.0544 11 24.9999 11C27.9454 11 30.3333 13.3878 30.3333 16.3333Z" stroke="#311041" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
-        </div>
-        <div></div>
+        <button class="hamburgerBtn"></button>
+        <ul class="linksMenu-container">
+            <a class="linkMenu-container" href="#"><li class="linkMenu">Tipos de prato</li></a>
+            <a class="linkMenu-container" href="#"><li class="linkMenu">Da Semana</li></a>
+            <a class="linkMenu-container" href="#"><li class="linkMenu">Pratos Típicos</li></a>
+            <a class="linkMenu-container" href="#"><li class="linkMenu">Receitas</li></a>
+        </ul>
     </nav>
+
+    <script src="Menu.js">
+        //  Menu Toggle
+        const hamburgerBtn = document.querySelector(".hamburgerBtn");
+        const nav = document.getElementsByTagName("nav")[0];
+        hamburgerBtn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
