@@ -30,10 +30,6 @@ class Menu extends HTMLElement {
 
 
         this.shadowRoot.innerHTML = `
-            <style>
-                .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
-                h3 { margin: 0 0 8px; color: #333; }
-            </style>
             <div class="card">
                 <h3>${page}</h3>
                 <slot></slot>
