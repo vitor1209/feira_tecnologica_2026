@@ -5,28 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="/teste.css">
 
     <title>Modelo de Menu</title>
 </head>
-<body>
-    <nav>
-        <button class="hamburgerBtn"></button>
-        <ul class="linksMenu-container">
-            <a class="linkMenu-container" href="#"><li class="linkMenu">Tipos de prato</li></a>
-            <a class="linkMenu-container" href="#"><li class="linkMenu">Da Semana</li></a>
-            <a class="linkMenu-container" href="#"><li class="linkMenu">Pratos Típicos</li></a>
-            <a class="linkMenu-container" href="#"><li class="linkMenu">Receitas</li></a>
-        </ul>
-    </nav>
 
-    <script src="Menu.js">
-        //  Menu Toggle
-        const hamburgerBtn = document.querySelector(".hamburgerBtn");
-        const nav = document.getElementsByTagName("nav")[0];
-        hamburgerBtn.addEventListener("click", () => {
-            nav.classList.toggle("active");
-        });
-    </script>
+<body>
+    <menu-component></menu-component>
+    <h1>Bah</h1>
+    <script type="module" src="./Menu.js" defer></script>
 </body>
 </html>
