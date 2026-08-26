@@ -4,13 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="Votacao.css">
 
     <title>Votacao</title>
 </head>
 
 <body>
-    Votacao
+    <header class="topo">
+        <a href="#" class="voltar">
+            ← <span>Voltar para projetos</span>
+        </a>
+
+        <button class="menu-btn">☰</button>
+    </header>
+    
+    <section class="titulo-feira">
+        <h1>Feira Tecnológica<br>Etec MCM 2026</h1>
+    </section>
+
+    <section class="card-projeto">
+
+        <div class="nome-projeto">
+            <h2>Nome do projeto</h2>
+            <div class="linha"></div>
+
+            <div class="tags-ods">
+                <span class="ods-tag ods-4">ODS 4 - Educação de qualidade</span>
+                <span class="ods-tag ods-15">ODS 15 - Vida terrestre</span>
+            </div>
+        </div>
+
+        <div class="votacao">
+            <h3>Já visitou este<br>estande?</h3>
+
+            <p>Deixe sua curtida se gostou do projeto!</p>
+
+            <button class="curtir" onclick="curtirProjeto(this)">
+                <i class="fa-regular fa-thumbs-up"></i>
+            </button>
+        </div>
+
+        <div class="linha-separadora"></div>
+
+        <div class="informacoes">
+            <div class="info">
+                <span>CURSO</span>
+                <strong>Informática para<br>Internet</strong>
+            </div>
+
+            <div class="info">
+                <span>TURMA</span>
+                <strong>3ºC</strong>
+            </div>
+
+            <div class="info">
+                <span>LOCAL</span>
+                <strong>Sala: 2A · Bloco A</strong>
+            </div>
+
+            <div class="info">
+                <span>ORIENTADOR(A)</span>
+                <strong>Prof. abc</strong>
+            </div>
+        </div>
+
+        <div class="linha-separadora"></div>
+
+        <div class="descricao">
+            <span>SOBRE O PROJETO</span>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed diam non magna eros, enim nulla porttitor at sed magna.
+                Quis eleifend nibh lacus, quis ex in augue.
+                Nulla ullamcorper nisi velit quis ex commodo consequat.
+            </p>
+        </div>
+
+        <div class="integrantes">
+            <span>INTEGRANTES</span>
+
+            <div class="nomes">
+                <div>Fulano de tal</div>
+                <div>jojo todynho</div>
+                <div>Fulano de tal</div>
+                <div>Fulano de tal</div>
+            </div>
+        </div>
+
+    </section>
+    </main>
+    <script>
+        function curtirProjeto(botao) {
+            const icone = botao.querySelector("i");
+
+            icone.classList.toggle("fa-regular");
+            icone.classList.toggle("fa-solid");
+        }
+    </script>
 </body>
 
 </html>

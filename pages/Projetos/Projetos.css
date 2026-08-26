@@ -1,0 +1,338 @@
+/* ============================= */
+/* GERAL */
+/* ============================= */
+
+body {
+
+    margin: 0;
+    font-family: "Afacad", sans-serif;
+    color: #30123d;
+
+}
+
+
+/* ============================= */
+/* PÁGINA */
+/* ============================= */
+
+.pagina-projetos {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 24px 14px 45px;
+
+}
+
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+.cabecalho-projetos {
+
+    margin-bottom: 20px;
+
+}
+
+
+.breadcrumb {
+
+    margin: 0 0 3px;
+
+    font-size: 14px;
+
+    color: #777;
+
+}
+
+
+.breadcrumb span {
+
+    margin: 0 3px;
+
+}
+
+
+.cabecalho-projetos h1 {
+
+    margin: 0;
+
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 30px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #3d1450;
+
+}
+
+
+.descricao-projetos {
+
+    width: 230px;
+
+    margin: 5px 0 0;
+
+    font-size: 15px;
+
+    line-height: 1.15;
+
+    color: #4d3156;
+
+}
+
+
+/* ============================= */
+/* ÁREA DOS FILTROS */
+/* ============================= */
+
+.area-filtros {
+
+    width: 100%;
+    margin-bottom: 35px;
+
+}
+
+
+/* ============================= */
+/* SEARCHBAR */
+/* ============================= */
+
+.container-searchbar {
+
+    width: 100%;
+    max-width: 335px;
+
+}
+
+/* ============================= */
+/* FILTROS */
+/* ============================= */
+
+.filtros {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    margin-top: 8px;
+
+}
+
+
+/* ============================= */
+/* DROPDOWN */
+/* ============================= */
+
+.dropdown {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+/* CURSO OCUPA A LINHA TODA */
+
+.dropdown-curso {
+
+    grid-column: 1 / 3;
+
+}
+
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+.filtrocurso {    
+
+
+}
+
+.filtro {
+
+    width: 100%;
+
+    height: 35px;
+
+    box-sizing: border-box;
+
+    padding: 0 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 5px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    color: #444;
+
+    font-family: "Afacad", sans-serif;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.14);
+
+    cursor: pointer;
+
+}
+
+.texto-filtro{
+    background-color: #ffffff;
+}
+
+.seta {
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    color: #333;
+
+    transition: transform 0.2s;
+
+}
+
+
+.dropdown.aberto .seta {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* ============================= */
+/* OPÇÕES DO DROPDOWN */
+/* ============================= */
+
+.opcoes-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 4px);
+
+    left: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 4px;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.18);
+
+    z-index: 100;
+
+}
+
+
+.dropdown.aberto .opcoes-dropdown {
+
+    display: flex;
+
+}
+
+
+.opcoes-dropdown button {
+
+    width: 100%;
+
+    padding: 5px 6px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #444;
+
+    font-family: "Afacad", sans-serif;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.opcoes-dropdown button:hover {
+
+    background: #f0e9f3;
+
+    color: #55286f;
+
+}
+
+
+/* ============================= */
+/* GRID DOS CARDS */
+/* ============================= */
+
+.grid-projetos {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 168px;
+
+    justify-content: start;
+
+    gap: 20px;
+
+}
+
+
+/* ============================= */
+/* NENHUM PROJETO */
+/* ============================= */
+
+.nenhum-projeto {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    color: #6b586f;
+
+}
