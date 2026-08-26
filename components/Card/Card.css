@@ -3,22 +3,18 @@
 /* ============================= */
 
 .card-projeto {
-
-    width: 168px;
-
-    background: #ffffff;
-
+    width: 260px;
+    max-width: 100%;
     border-radius: 18px;
-
     overflow: hidden;
-
+    background: #ffffff;
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.18);
 
     display: flex;
-
     flex-direction: column;
 
+    box-sizing: border-box;
 }
 
 
@@ -27,29 +23,26 @@
 /* ============================= */
 
 .card-imagem-container {
-
     position: relative;
 
     width: 100%;
-
-    height: 79px;
+    aspect-ratio: 16 / 8;
 
     background: #d9d9d9;
 
     overflow: hidden;
 
+    flex-shrink: 0;
 }
 
 
 .card-imagem {
-
     width: 100%;
     height: 100%;
 
     display: block;
 
     object-fit: cover;
-
 }
 
 
@@ -58,17 +51,16 @@
 /* ============================= */
 
 .card-ods {
-
     position: absolute;
 
-    top: 9px;
-
-    right: 8px;
+    top: 10px;
+    right: 10px;
 
     display: flex;
-
     gap: 4px;
 
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 
@@ -77,79 +69,86 @@
 /* ============================= */
 
 .card-conteudo {
+    width: 100%;
 
-    min-height: 107px;
-
-    padding: 8px 20px 9px;
+    padding: 14px 18px 15px;
 
     display: flex;
-
     flex-direction: column;
 
     box-sizing: border-box;
-
 }
 
 
-.card-titulo {
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
 
+.card-titulo {
     margin: 0;
 
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 11px;
-
-    line-height: 1.1;
-
+    font-size: 16px;
+    line-height: 1.15;
     font-weight: 700;
 
     color: #111;
 
+    overflow-wrap: break-word;
 }
 
 
+/* ============================= */
+/* SUBTÍTULO */
+/* ============================= */
+
 .card-subtitulo {
+    margin: 4px 0 10px;
 
-    margin: 2px 0 8px;
-
-    font-size: 9px;
-
-    line-height: 1.1;
+    font-size: 14px;
+    line-height: 1.25;
 
     color: #444;
 
+    overflow-wrap: break-word;
 }
 
+
+/* ============================= */
+/* CURSO */
+/* ============================= */
 
 .card-curso {
-
     margin: 0;
 
-    font-size: 9px;
-
-    line-height: 1.1;
+    font-size: 14px;
+    line-height: 1.25;
 
     color: #333;
 
+    overflow-wrap: break-word;
 }
 
 
-.card-local {
+/* ============================= */
+/* LOCAL */
+/* ============================= */
 
+.card-local {
     display: flex;
 
-    gap: 10px;
+    gap: 12px;
 
-    margin-top: 2px;
+    margin-top: 5px;
+    margin-bottom: 12px;
 
-    margin-bottom: 8px;
-
-    font-size: 9px;
-
-    line-height: 1.1;
+    font-size: 15px;
+    line-height: 1.25;
 
     color: #333;
 
+    flex-wrap: wrap;
 }
 
 
@@ -158,29 +157,53 @@
 /* ============================= */
 
 .card-botao {
-
     margin-top: auto;
 
     width: 100%;
+    min-height: 30px;
 
-    height: 20px;
+    padding: 6px 10px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
+
+    box-sizing: border-box;
 
     border-radius: 20px;
 
     background: #5f2d79;
-
     color: #ffffff;
 
     text-decoration: none;
 
-    font-size: 9px;
-
+    font-size: 15px;
     font-weight: 600;
+
+    text-align: center;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .card-projeto {
+        width: 100%;
+        max-width: 260px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .card-projeto {
+        max-width: 100%;
+    }
 
 }
