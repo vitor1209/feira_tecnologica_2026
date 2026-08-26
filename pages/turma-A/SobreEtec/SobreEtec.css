@@ -68,25 +68,6 @@ a {
     z-index: 100;
 }
 
-
-/* logo */
-
-.header-logo {
-    width: 25px;
-    height: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-icon {
-    color: var(--purple);
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
 /* botão */
 
 .menu-button {
