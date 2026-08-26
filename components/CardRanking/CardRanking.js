@@ -1,3 +1,12 @@
+const style = document.createElement("link");
+
+style.rel = "stylesheet";
+style.href = new URL("./CardRanking.css", import.meta.url);
+
+console.log(style.href);
+
+document.head.appendChild(style);
+
 export function CardRanking({ title, description, image, price }) {
   const card = document.createElement("article");
 

@@ -1,4 +1,7 @@
-import { CardRanking } from "../components/CardRanking/CardRanking.js";
+import { CardRanking } from "../../components/CardRanking/CardRanking.js";
+import "../../components/CardRanking/CardRanking.css";
+
+
 
 const productsContainer = document.querySelector("#products");
 
@@ -9,6 +12,6 @@ const product = {
   price: "3.499,90"
 };
 
-const card = Card(product);
+const card = CardRanking(product);
 
 productsContainer.appendChild(card);
