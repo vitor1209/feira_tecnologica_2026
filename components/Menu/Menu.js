@@ -1,19 +1,6 @@
 class Menu extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' }); // <-- isso que falta
-  }
-
-  async connectedCallback() {
-    try {
-      const css = new CSSStyleSheet();
-      await css.replace(await fetch('Menu.css').then(r => r.text()));
-      this.shadowRoot.adoptedStyleSheets = [css];
-    } catch (err) {
-      console.error('Falha ao carregar Menu.css:', err);
-    }
-
-    this.shadowRoot.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
       <nav>
         <button class="hamburgerBtn"></button>
         <ul class="linksMenu-container">
@@ -29,9 +16,9 @@ class Menu extends HTMLElement {
       </nav>
     `;
 
-    // registra o evento depois que o HTML já está no shadow root
-    const nav = this.shadowRoot.querySelector('nav');
-    const btn = this.shadowRoot.querySelector('.hamburgerBtn');
+    // registra o evento depois que o HTML já está no DOM
+    const nav = this.querySelector('nav');
+    const btn = this.querySelector('.hamburgerBtn');
 
     btn.addEventListener('click', () => {
       nav.classList.toggle('active');
