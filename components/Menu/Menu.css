@@ -38,7 +38,7 @@ nav {
 /* ------- Menu -------- */
 .linksMenu-container {
     display: flex;
-    border-radius: 16px;
+    border-radius: 16px 0 16px 16px;
 }
 
 .linkMenu {

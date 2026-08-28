@@ -1,14 +1,16 @@
 class Menu extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' }); // <-- isso que falta
+  }
 
   async connectedCallback() {
-
     try {
       const css = new CSSStyleSheet();
-      await css.replace(await fetch('./Menu.css').then(r => r.text()));
+      await css.replace(await fetch('Menu.css').then(r => r.text()));
       this.shadowRoot.adoptedStyleSheets = [css];
     } catch (err) {
       console.error('Falha ao carregar Menu.css:', err);
-      // componente ainda renderiza, só sem o CSS externo
     }
 
     this.shadowRoot.innerHTML = `
@@ -26,6 +28,14 @@ class Menu extends HTMLElement {
         </ul>
       </nav>
     `;
+
+    // registra o evento depois que o HTML já está no shadow root
+    const nav = this.shadowRoot.querySelector('nav');
+    const btn = this.shadowRoot.querySelector('.hamburgerBtn');
+
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
   }
 }
 
