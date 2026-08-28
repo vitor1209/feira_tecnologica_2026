@@ -36,3 +36,43 @@ projetos.forEach(projeto => {
 
     productsContainer.appendChild(card);
 });
+
+import { criarGraficoODS } from "../../components/GraficoODS/GraficoODS.js";
+
+const dadosODS = [
+    { ods: 11, valor: 11 },
+    { ods: 10, valor: 10 },
+    { ods: 11, valor: 11 },
+    { ods: 4, valor: 7 },
+    { ods: 6, valor: 7 },
+    { ods: 8, valor: 7 },
+    { ods: 13, valor: 7 },
+    { ods: 7, valor: 4 },
+    { ods: 3, valor: 4 },
+    { ods: 7, valor: 4 },
+    { ods: 9, valor: 4 },
+    { ods: 14, valor: 4 },
+    { ods: 16, valor: 4 },
+    { ods: 18, valor: 4 },
+    { ods: 1, valor: 0 },
+    { ods: 5, valor: 0 },
+    { ods: 17, valor: 0 }
+];
+
+const elementoGrafico = document.querySelector("#graficoODS");
+
+criarGraficoODS(elementoGrafico, dadosODS);
+
+const container =
+    document.getElementById("lista-projetos");
+
+const containerBusca =
+    document.getElementById("barra-busca");
+
+
+containerBusca.innerHTML =
+    criarSearchBar();
+
+
+const campoBusca =
+    document.getElementById("busca-projetos");

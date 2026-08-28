@@ -1,6 +1,279 @@
+/* ==================================================
+   HEADER
+================================================== */
+
+.ranking-header {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
+/* Breadcrumb */
+
+.ranking-header__breadcrumb {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 28px;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 18px;
+
+    color: #777;
+}
+
+.ranking-header__breadcrumb span:nth-child(2) {
+    margin: 0 4px;
+}
+
+main{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Título */
+
+.ranking-header__content h1 {
+    margin: 0;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+
+    color: #37134d;
+}
+
+.ranking-header__content p {
+    margin: 4px 0 0;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 20px;
+
+    color: #37134d;
+}
+
+
+/* Estatísticas */
+
+.ranking-header__estatisticas {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 36px;
+}
+
+.ranking-header__estatistica {
+    width: 178px;
+    height: 106px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    background-color: #fff;
+}
+
+.ranking-header__estatistica strong {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #000;
+}
+
+.ranking-header__estatistica span {
+    margin-top: 8px;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 17px;
+
+    color: #222;
+}
+
+
+/* ==================================================
+   ODS
+================================================== */
+
+.ranking-ods h2 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #37134d;
+}
+
+
+/* ==================================================
+   PÓDIO
+================================================== */
+
+.podio {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 12%;
+}
+
+.podio__titulo {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #37134d;
+}
+
+.podio__container {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 24px;
+}
+
+
+/* Participante */
+
+.podio__participante {
+    position: relative;
+
+    width: 115px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Nome do projeto */
+
+.podio__nome {
+    position: absolute;
+
+    bottom: calc(100% + 15px);
+
+    width: 140px;
+
+    text-align: center;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 20px;
+    line-height: 1.05;
+
+    color: #222;
+}
+
+
+/* Bloco */
+
+.podio__bloco {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.podio__bloco span {
+    font-family: "Afacad", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #fff;
+}
+
+
+/* ==================================================
+   POSIÇÕES
+================================================== */
+
+.podio__participante--primeiro {
+    height: 177px;
+}
+
+.podio__participante--segundo {
+    height: 105px;
+}
+
+.podio__participante--terceiro {
+    height: 61px;
+}
+
+
+/* 1º */
+
+.podio__participante--primeiro .podio__bloco {
+    background-color: #a000eb;
+}
+
+
+/* 2º */
+
+.podio__participante--segundo .podio__bloco {
+    background-color: #7000a8;
+}
+
+
+/* 3º */
+
+.podio__participante--terceiro .podio__bloco {
+    background-color: #a86bdd;
+}
+
+
+/* ==================================================
+   RANKING
+================================================== */
+
+.ranking-lista {
+    width: 100%;
+}
+
+.ranking-lista h2 {
+    margin: 0 0 24px;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #37134d;
+}
+
+
+/* Cards */
+
 #products {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 20px;
 }
