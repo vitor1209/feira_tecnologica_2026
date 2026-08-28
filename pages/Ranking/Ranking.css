@@ -26,13 +26,19 @@
     margin: 0 4px;
 }
 
-main{
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Título */
@@ -133,14 +139,11 @@ main{
 }
 
 .podio__titulo {
-    margin: 0 0 30px;
 
     text-align: center;
-
     font-family: "Afacad", sans-serif;
     font-size: 32px;
     font-weight: 700;
-
     color: #37134d;
 }
 
