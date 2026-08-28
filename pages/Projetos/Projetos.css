@@ -3,11 +3,11 @@
 /* ============================= */
 
 body {
-
     margin: 0;
-    font-family: "Afacad", sans-serif;
-    color: #30123d;
 
+    font-family: "Afacad", sans-serif;
+
+    color: #30123d;
 }
 
 
@@ -16,13 +16,11 @@ body {
 /* ============================= */
 
 .pagina-projetos {
-
     width: 100%;
 
     box-sizing: border-box;
 
     padding: 24px 14px 45px;
-
 }
 
 
@@ -31,59 +29,47 @@ body {
 /* ============================= */
 
 .cabecalho-projetos {
-
     margin-bottom: 20px;
-
 }
 
 
 .breadcrumb {
-
     margin: 0 0 3px;
 
     font-size: 14px;
 
     color: #777;
-
 }
 
 
 .breadcrumb span {
-
     margin: 0 3px;
-
 }
 
 
 .cabecalho-projetos h1 {
-
     margin: 0;
 
     font-family: "Ubuntu", sans-serif;
 
     font-size: 30px;
-
     line-height: 1.1;
 
     font-weight: 700;
 
     color: #3d1450;
-
 }
 
 
 .descricao-projetos {
-
     width: 230px;
 
     margin: 5px 0 0;
 
     font-size: 15px;
-
     line-height: 1.15;
 
     color: #4d3156;
-
 }
 
 
@@ -92,10 +78,9 @@ body {
 /* ============================= */
 
 .area-filtros {
-
     width: 100%;
-    margin-bottom: 35px;
 
+    margin-bottom: 35px;
 }
 
 
@@ -104,18 +89,17 @@ body {
 /* ============================= */
 
 .container-searchbar {
-
     width: 100%;
-    max-width: 335px;
 
+    max-width: 335px;
 }
+
 
 /* ============================= */
 /* FILTROS */
 /* ============================= */
 
 .filtros {
-
     width: 100%;
 
     max-width: 100%;
@@ -127,7 +111,6 @@ body {
     gap: 6px;
 
     margin-top: 8px;
-
 }
 
 
@@ -136,20 +119,16 @@ body {
 /* ============================= */
 
 .dropdown {
-
     position: relative;
 
     width: 100%;
-
 }
 
 
 /* CURSO OCUPA A LINHA TODA */
 
 .dropdown-curso {
-
     grid-column: 1 / 3;
-
 }
 
 
@@ -157,13 +136,11 @@ body {
 /* BOTÃO */
 /* ============================= */
 
-.filtrocurso {    
-
-
+.filtrocurso {
 }
 
-.filtro {
 
+.filtro {
     width: 100%;
 
     height: 35px;
@@ -198,15 +175,15 @@ body {
         0 1px 3px rgba(0, 0, 0, 0.14);
 
     cursor: pointer;
-
 }
 
-.texto-filtro{
+
+.texto-filtro {
     background-color: #ffffff;
 }
 
-.seta {
 
+.seta {
     flex-shrink: 0;
 
     font-size: 11px;
@@ -216,14 +193,11 @@ body {
     color: #333;
 
     transition: transform 0.2s;
-
 }
 
 
 .dropdown.aberto .seta {
-
     transform: rotate(180deg);
-
 }
 
 
@@ -232,7 +206,6 @@ body {
 /* ============================= */
 
 .opcoes-dropdown {
-
     position: absolute;
 
     top: calc(100% + 4px);
@@ -259,19 +232,15 @@ body {
         0 3px 10px rgba(0, 0, 0, 0.18);
 
     z-index: 100;
-
 }
 
 
 .dropdown.aberto .opcoes-dropdown {
-
     display: flex;
-
 }
 
 
 .opcoes-dropdown button {
-
     width: 100%;
 
     padding: 5px 6px;
@@ -291,16 +260,13 @@ body {
     text-align: left;
 
     cursor: pointer;
-
 }
 
 
 .opcoes-dropdown button:hover {
-
     background: #f0e9f3;
 
     color: #55286f;
-
 }
 
 
@@ -309,17 +275,27 @@ body {
 /* ============================= */
 
 .grid-projetos {
-
     width: 100%;
 
     display: grid;
 
-    grid-template-columns: 168px;
+    /*
+     * Os cards possuem aproximadamente 260px.
+     * O grid cria automaticamente a quantidade
+     * de colunas que couber na largura disponível.
+     */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 260px)
+    );
 
-    justify-content: start;
+    gap: 24px;
 
-    gap: 20px;
+    justify-content: center;
 
+    align-items: start;
+
+    box-sizing: border-box;
 }
 
 
@@ -328,11 +304,41 @@ body {
 /* ============================= */
 
 .nenhum-projeto {
-
     margin: 0;
 
     font-size: 11px;
 
     color: #6b586f;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/*
+ * Em telas menores, permitimos que o card
+ * ocupe toda a largura disponível.
+ */
+
+@media (max-width: 600px) {
+
+    .grid-projetos {
+        grid-template-columns: minmax(0, 260px);
+    }
+
+}
+
+
+/*
+ * Em celulares muito pequenos,
+ * o card passa a acompanhar a largura da tela.
+ */
+
+@media (max-width: 300px) {
+
+    .grid-projetos {
+        grid-template-columns: minmax(0, 1fr);
+    }
 
 }
