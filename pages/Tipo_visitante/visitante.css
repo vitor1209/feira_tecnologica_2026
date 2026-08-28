@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   background-color: #f5f3ed;
+   color: #3f1952;
+}
+
+.pagina{
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 14px 30px;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botao-voltar{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.botao-voltar::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    background-color: #888;
+    top: 15px;
+    left: 4px;
+}
+
+.botao-voltar::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #888;
+    border-bottom: 1px solid #888;
+    transform: rotate(45deg);
+    top: 10px;
+    left: 5px;
+
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    position: relative;
+}
+
+.logo::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.opcoes{
+    width: 100%;
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card{
+    width: 100%;
+    min-height: 81px;
+    background-color: #ffffff;
+    border-radius: 13px;
+    padding: 11px 24px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0 , 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2{
+    font-size: 10px;
+    font-weight: 700;
+    color: #4b1d60;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 7px;
+    line-height: 1.35;
+    color: #8b8b8b;
+    min-height: 17px;
+}
+
+.btn-entrar {
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: #5c2675;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #4b1d60;
+}
+
+.btn-entrar:activate {
+    transform: scale(0.98);
+}
+
+@media (max-width: 400px) {
+    .pagina {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .opcoes {
+        margin-top: 68px;
+    }
+
+    .card {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
