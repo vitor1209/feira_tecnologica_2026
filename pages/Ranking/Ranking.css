@@ -5,6 +5,10 @@
 .ranking-header {
     width: 100%;
     margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 2.5%;
+    box-sizing: border-box;
+
 }
 
 
@@ -90,7 +94,6 @@ main {
 }
 
 .ranking-header__estatistica strong {
-    font-family: "Ubuntu", sans-serif;
     font-size: 38px;
     font-weight: 700;
     line-height: 1;
@@ -136,6 +139,7 @@ main {
     flex-direction: column;
     width: 80%;
     margin-bottom: 12%;
+    margin-top: -9%;
 }
 
 .podio__titulo {
