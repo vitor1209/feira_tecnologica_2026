@@ -1,15 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../index.css">
     <title>Projetos</title>
+
+    <link rel="stylesheet" href="../../components/Card/Card.css">
+    <link rel="stylesheet" href="../../components/ODS/OdsTags.css">
+    <link rel="stylesheet" href="../../components/SearchBar/SearchBar.css">
+    <link rel="stylesheet" href="./Projetos.css">
+    <link rel="stylesheet" href="../../index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-    Projetos
+
+    <main class="pagina-projetos">
+
+        <section class="cabecalho-projetos">
+
+            <p class="breadcrumb">
+                Home <span>›</span> Projetos
+            </p>
+
+            <h1>Projetos da Feira</h1>
+
+            <p class="descricao-projetos">
+                Mais de 30 projetos disponíveis para visita e avaliação.
+            </p>
+
+        </section>
+
+        <section class="area-filtros">
+
+            <div id="barra-busca"></div>
+
+            <div class="filtrocurso">
+                <div class="dropdown" id="dropdown-curso">
+
+                    <button class="filtro" type="button">
+
+                        <span class="texto-filtro">
+                            Todos os cursos
+                        </span>
+
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todos os cursos
+                        </button>
+
+                        <button type="button" data-valor="Informática para Internet">
+                            Informática para Internet
+                        </button>
+
+                        <button type="button" data-valor="Administração">
+                            Administração
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="filtros">
+
+                <div class="dropdown" id="dropdown-ods">
+
+                    <button class="filtro" type="button">
+
+                        <span class="texto-filtro">
+                            Todas as ODS
+                        </span>
+
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todas as ODS
+                        </button>
+
+                        <button type="button" data-valor="4">
+                            ODS 4
+                        </button>
+
+                        <button type="button" data-valor="9">
+                            ODS 9
+                        </button>
+
+                        <button type="button" data-valor="11">
+                            ODS 11
+                        </button>
+
+                        <button type="button" data-valor="12">
+                            ODS 12
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="dropdown-sala">
+                    <button class="filtro" type="button">
+
+                        <span class="texto-filtro">
+                            Todas as salas
+                        </span>
+
+                        <span class="seta">
+                            ↓
+                        </span>
+
+                    </button>
+
+                    <div class="opcoes-dropdown">
+
+                        <button type="button" data-valor="todos">
+                            Todas as salas
+                        </button>
+
+                        <button type="button" data-valor="2A">
+                            Sala 2A
+                        </button>
+
+                        <button type="button" data-valor="3B">
+                            Sala 3B
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="grid-projetos" id="lista-projetos">
+        </section>
+
+    </main>
+
+
+    <script src="../../components/ODS/OdsTags.js"></script>
+
+    <script src="../../components/Card/Card.js"></script>
+
+    <script src="../../components/SearchBar/SearchBar.js"></script>
+
+    <script src="./Projetos.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,134 @@
+.card-ranking {
+    width: calc(100% - 24px);
+    min-height: 90px;
+
+    margin: 0 auto;
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+    border-radius: 24px;
+
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.20);
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+
+/* NÚMERO */
+
+.ranking-numero {
+    width: 42px;
+    flex-shrink: 0;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #381052;
+}
+
+
+/* PARTE CENTRAL */
+
+.ranking-info {
+    flex: 1;
+    min-width: 0;
+
+    margin-left: 4px;
+}
+
+.ranking-info h2 {
+    margin: 0 0 8px;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    color: #111;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ODS + LOCALIZAÇÃO */
+
+.ranking-detalhes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+
+.ods-tag,
+.ranking-localizacao {
+    padding: 4px 9px;
+
+    border-radius: 14px;
+
+    background: #e5d0fa;
+
+    color: #5c3b70;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* CURTIDAS */
+
+.ranking-curtidas {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    margin-left: 6px;
+
+    flex-shrink: 0;
+}
+
+.numero-curtidas {
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #050505;
+}
+
+.ranking-curtidas i.fa-thumbs-up {
+    color: #633083 !important;
+    font-size: 22px;
+}
+/* 
+
+.card-ranking .ranking-info {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.card-ranking .ranking-info h2 {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.card-ranking .ranking-curtidas {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.card-ranking .numero-curtidas {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.card-ranking .like {
+    background: transparent !important;
+    background-color: transparent !important;
+} */
