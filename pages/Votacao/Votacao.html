@@ -52,8 +52,13 @@ Modal. -->
             <h1 class="page-title">Feira Tecnológica<br>Etec MCM 2026</h1>
         </div>
 
-
-        <main class="card">
+        <!--
+            data-project-id: o BACK deve preencher esse valor dinamicamente
+            (via template engine, atributo renderizado no servidor, ou
+            lido da URL/rota, ex: /votar/123). O script.js lê esse atributo
+            para saber em qual projeto o voto deve ser registrado.
+        -->
+        <main class="card" data-project-id="">
 
             <div class="project-head">
                 <h2 class="project-name">Nome do projeto</h2>
@@ -65,7 +70,7 @@ Modal. -->
                 </div>
             </div>
 
-            <button class="vote-box" id="voteBtn">
+            <button class="vote-box" id="voteBtn" type="button">
                 <p class="vote-title">Já visitou este estante?</p>
                 <p class="vote-subtitle">Deixe sua curtida se gostou do projeto!</p>
                 <svg id="thumbIcon" class="thumb-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -132,24 +137,21 @@ Modal. -->
                 </svg>
             </button>
 
-            <div class="modal-icon">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"
-                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M7 10v12"></path>
-                    <path
-                        d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z">
-                    </path>
+            <div class="modal-icon" id="modalIcon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
             </div>
 
-            <h3 class="modal-title">Curtida enviada!</h3>
-            <p class="modal-text">Obrigado por visitar o estante e apoiar este projeto.</p>
+            <h3 class="modal-title" id="modalTitle">Voto registrado!</h3>
+            <p class="modal-text" id="modalText">Obrigado por visitar o estande e apoiar este projeto.</p>
 
-            <button class="modal-btn" id="modalOkBtn">Fechar</button>
+            <button class="modal-btn" id="modalOkBtn" type="button">Fechar</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="Votacao.js"></script>
    
 </body>
 
