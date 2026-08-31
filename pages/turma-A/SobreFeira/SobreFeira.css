@@ -1,0 +1,594 @@
+body {
+    background: #faf8fb;
+    color: #311041;
+}
+
+.menu {
+    width: 100%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e9dfed;
+}
+
+.menu-container {
+    width: 90%;
+    max-width: 1100px;
+    height: 75px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usuario {
+    color: #55286F;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 35px;
+}
+
+.menu-links a {
+    color: #311041;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: #55286F;
+}
+
+.menu-mobile {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #55286F;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 70px 30px;
+}
+
+.introducao {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.subtitulo {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #311041;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+.introducao h1 {
+    margin: 0;
+
+    color: #311041;
+
+    font-size: 58px;
+
+    line-height: 1.05;
+}
+
+.introducao h1 strong {
+    display: block;
+
+    color: #55286F;
+
+    font-weight: 700;
+}
+
+.introducao p {
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    color: #5d5262;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.estatisticas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 100px;
+}
+
+.card-estatistica {
+    min-height: 190px;
+
+    padding: 25px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9dfed;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(49, 16, 65, 0.08);
+}
+
+.icone {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #55286F;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.card-estatistica h2 {
+    margin: 0;
+
+    color: #311041;
+
+    font-size: 30px;
+}
+
+.card-estatistica p {
+    margin-top: 8px;
+
+    color: #6b6070;
+
+    line-height: 1.4;
+}
+
+section h2 {
+    margin-bottom: 30px;
+
+    color: #55286F;
+
+    font-size: 34px;
+}
+
+.historia {
+    margin-bottom: 90px;
+}
+
+.historia p {
+    margin-bottom: 25px;
+
+    color: #5d5262;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.missao {
+    margin-bottom: 90px;
+}
+
+.card-missao {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9dfed;
+
+    border-radius: 18px;
+
+    box-shadow: 0 7px 20px rgba(49, 16, 65, 0.06);
+}
+
+.icone-card {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #55286F;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.card-missao h3 {
+    margin: 0 0 8px;
+
+    color: #311041;
+
+    font-size: 20px;
+}
+
+.card-missao p {
+    margin: 0;
+
+    color: #68616b;
+
+    line-height: 1.5;
+}
+
+.como-funciona {
+    margin-bottom: 90px;
+}
+
+.etapa {
+    position: relative;
+
+    min-height: 170px;
+
+    margin-bottom: 20px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9dfed;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 7px 20px rgba(49, 16, 65, 0.05);
+}
+
+.numero {
+    position: absolute;
+
+    top: 10px;
+    right: 20px;
+
+    color: #eee5f1;
+
+    font-size: 100px;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+.conteudo-etapa {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+.conteudo-etapa > span {
+    color: #55286F;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.conteudo-etapa h3 {
+    margin: 10px 0;
+
+    color: #311041;
+
+    font-size: 22px;
+}
+
+.conteudo-etapa p {
+    margin: 0;
+
+    color: #68616b;
+
+    line-height: 1.6;
+}
+
+.beneficios {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 100px;
+}
+
+.beneficio h2 {
+    color: #55286F;
+
+    font-size: 28px;
+}
+
+.beneficio ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.beneficio li {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #5d5262;
+
+    line-height: 1.5;
+}
+
+.beneficio li span {
+    color: #55286F;
+
+    font-size: 13px;
+}
+
+.edicoes {
+    margin-bottom: 100px;
+}
+
+.galeria {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 210px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.02);
+}
+
+.faq {
+    margin-bottom: 50px;
+}
+
+.faq-item {
+    margin-bottom: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9dfed;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(49, 16, 65, 0.05);
+}
+
+.faq-pergunta {
+    width: 100%;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #311041;
+
+    font-size: 16px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.faq-pergunta span {
+    color: #55286F;
+
+    font-size: 22px;
+
+    transition: transform 0.3s;
+}
+
+.faq-item.ativo .faq-pergunta span {
+    transform: rotate(180deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+
+    overflow: hidden;
+
+    background: #fcfaff;
+
+    transition: max-height 0.3s ease;
+}
+
+.faq-resposta p {
+    margin: 0;
+
+    padding: 0 22px 22px;
+
+    color: #68616b;
+
+    line-height: 1.6;
+}
+
+.faq-item.ativo .faq-resposta {
+    max-height: 200px;
+}
+
+@media (max-width: 800px) {
+
+    main {
+        padding: 50px 20px;
+    }
+
+    .menu-links {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        background: #ffffff;
+
+        text-align: center;
+
+        box-shadow: 0 10px 20px rgba(49, 16, 65, 0.08);
+    }
+
+    .menu-links.aberto {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .introducao h1 {
+        font-size: 45px;
+    }
+
+    .estatisticas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    main {
+        padding: 40px 18px;
+    }
+
+    .introducao h1 {
+        font-size: 39px;
+    }
+
+    .introducao p {
+        font-size: 16px;
+    }
+
+    .estatisticas {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .card-estatistica {
+        min-height: 170px;
+
+        padding: 20px 10px;
+    }
+
+    .card-estatistica h2 {
+        font-size: 25px;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+
+    .historia p {
+        font-size: 16px;
+    }
+
+    .card-missao {
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .etapa {
+        padding: 25px 20px;
+    }
+
+    .numero {
+        font-size: 75px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .galeria img {
+        height: 140px;
+
+        border-radius: 12px;
+    }
+
+    .faq-pergunta {
+        padding: 19px 16px;
+
+        font-size: 14px;
+    }
+}
