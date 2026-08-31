@@ -32,15 +32,24 @@ body {
     margin-bottom: 20px;
 }
 
+.ranking-header__breadcrumb{
+    display: flex;
+    align-items: center;
 
-.breadcrumb {
-    margin: 0 0 3px;
+    margin-bottom: 28px;
 
-    font-size: 14px;
+    font-family: "Afacad", sans-serif;
+    font-size: 18px;
 
     color: #777;
+
+    margin: 0 4px;
 }
 
+a {
+    color: #777;
+    text-decoration: none;
+}
 
 .breadcrumb span {
     margin: 0 3px;
