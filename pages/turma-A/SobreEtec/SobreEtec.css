@@ -77,8 +77,8 @@ p {
 /* botão */
 
 .menu-button {
-    width: 28px;
-    height: 28px;
+    width: 32px; /* era 28px */
+    height: 32px; /* era 28px */
 
     border: none;
     background: transparent;
@@ -88,13 +88,13 @@ p {
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 5px; /* era 4px */
 
     cursor: pointer;
 }
 
 .menu-button span {
-    width: 15px;
+    width: 18px; /* era 15px */
     height: 2px;
 
     background: #777;
@@ -108,7 +108,7 @@ p {
 /* animação do botão */
 
 .menu-button.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .menu-button.active span:nth-child(2) {
@@ -116,7 +116,7 @@ p {
 }
 
 .menu-button.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
@@ -157,7 +157,7 @@ p {
     color: #311041;
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 
     padding: 5px 0;
@@ -170,7 +170,7 @@ p {
 
 .hero {
     width: 100%;
-    height: 140px;
+    height: 170px; /* era 140px */
 
     position: relative;
 
@@ -208,7 +208,7 @@ p {
     display: block;
 
     font-family: "Afacad", sans-serif;
-    font-size: 8px;
+    font-size: 11px;
 
     margin-bottom: 5px;
 
@@ -218,7 +218,7 @@ p {
 .hero h1 {
     font-family: "Afacad", sans-serif;
 
-    font-size: 17px;
+    font-size: 26px;
     line-height: 1.2;
 
     font-weight: 700;
@@ -243,7 +243,7 @@ p {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 15px;
+    font-size: 24px;
 
     font-weight: 700;
 
@@ -259,7 +259,7 @@ p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 9px;
+    font-size: 16px;
 
     line-height: 1.65;
 
@@ -282,7 +282,7 @@ p {
 }
 
 .stat-card {
-    min-height: 53px;
+    min-height: 68px; /* era 62px */
 
     background: var(--card);
 
@@ -303,7 +303,7 @@ p {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 14px;
+    font-size: 18px;
 
     margin-bottom: 3px;
 }
@@ -312,7 +312,7 @@ p {
     color: #69636d;
     font-family: "Afacad", sans-serif;
 
-    font-size: 7px;
+    font-size: 13px;
 
     text-align: center;
 }
@@ -331,7 +331,7 @@ p {
 }
 
 .course-card {
-    min-height: 58px;
+    min-height: 72px; /* era 66px */
 
     background: var(--card);
 
@@ -339,24 +339,24 @@ p {
 
     border-radius: var(--radius-medium);
 
-    padding: 10px;
+    padding: 12px; /* era 10px */
 
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 12px; /* era 10px */
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .course-icon {
-    width: 25px;
-    height: 25px;
+    width: 36px; /* era 25px */
+    height: 36px; /* era 25px */
 
     flex-shrink: 0;
 
-    border-radius: 6px;
+    border-radius: 8px; /* era 6px */
 
     background: var(--purple);
 
@@ -367,14 +367,14 @@ p {
     align-items: center;
     justify-content: center;
 
-    font-size: 12px;
+    font-size: 18px; /* era 12px */
 }
 
 .course-info h3 {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 9px;
+    font-size: 20px;
 
     margin-bottom: 5px;
 }
@@ -383,7 +383,7 @@ p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 7px;
+    font-size: 15px;
 }
 
 
@@ -400,7 +400,7 @@ p {
 }
 
 .structure-item {
-    min-height: 42px;
+    min-height: 52px; /* era 46px */
 
     background: var(--card);
 
@@ -408,22 +408,22 @@ p {
 
     border-radius: 9px;
 
-    padding: 7px 10px;
+    padding: 8px 12px; /* era 7px 10px */
 
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 12px; /* era 10px */
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .structure-icon {
-    width: 22px;
-    height: 22px;
+    width: 32px; /* era 22px */
+    height: 32px; /* era 22px */
 
-    border-radius: 6px;
+    border-radius: 8px; /* era 6px */
 
     background: var(--purple);
 
@@ -434,7 +434,7 @@ p {
     align-items: center;
     justify-content: center;
 
-    font-size: 10px;
+    font-size: 18px; /* era 14px */
 
     flex-shrink: 0;
 }
@@ -443,7 +443,7 @@ p {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 8px;
+    font-size: 16px;
 
     font-weight: 600;
 }
@@ -462,7 +462,7 @@ p {
 }
 
 .award-card {
-    min-height: 39px;
+    min-height: 50px; /* era 44px */
 
     background: var(--card);
 
@@ -470,26 +470,26 @@ p {
 
     border-radius: 9px;
 
-    padding: 7px 10px;
+    padding: 8px 12px; /* era 7px 10px */
 
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 10px; /* era 8px */
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .award-medal {
-    font-size: 11px;
+    font-size: 22px; /* era 16px */
 }
 
 .award-card p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 7px;
+    font-size: 16px;
 
     line-height: 1.3;
 }
@@ -504,15 +504,15 @@ p {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 4px;
+    gap: 6px; /* era 4px */
 
     margin-bottom: 12px;
 }
 
 .gallery-image {
-    height: 44px;
+    height: 90px; /* era 44px — estava bem pequeno */
 
-    border-radius: 7px;
+    border-radius: 9px; /* era 7px */
 
     background-size: cover;
     background-position: center;
@@ -545,7 +545,7 @@ p {
 
     border-radius: var(--radius-medium);
 
-    padding: 15px 12px;
+    padding: 16px 14px; /* era 15px 12px */
 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -554,9 +554,9 @@ p {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 9px;
+    font-size: 16px;
 
-    margin-bottom: 15px;
+    margin-bottom: 16px; /* era 15px */
 }
 
 .contact-item {
@@ -564,9 +564,9 @@ p {
 
     align-items: flex-start;
 
-    gap: 9px;
+    gap: 11px; /* era 9px */
 
-    margin-bottom: 13px;
+    margin-bottom: 14px; /* era 13px */
 }
 
 .contact-item:last-child {
@@ -574,21 +574,21 @@ p {
 }
 
 .contact-icon {
-    width: 23px;
-    height: 23px;
+    width: 32px; /* era 23px */
+    height: 32px; /* era 23px */
 
     background: var(--purple);
 
     color: white;
 
-    border-radius: 6px;
+    border-radius: 8px; /* era 6px */
 
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    font-size: 10px;
+    font-size: 15px; /* era 10px */
 
     flex-shrink: 0;
 }
@@ -599,7 +599,7 @@ p {
     color: #311041;
     font-family: "Afacad", sans-serif;
 
-    font-size: 8px;
+    font-size: 13px;
 
     font-weight: bold;
 
@@ -610,7 +610,7 @@ p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 7px;
+    font-size: 13px;
 
     line-height: 1.4;
 }
@@ -628,7 +628,7 @@ p {
     color: #77727a;
     font-family: "Afacad", sans-serif;
 
-    font-size: 7px;
+    font-size: 11px;
 }
 
 
@@ -650,11 +650,11 @@ p {
     }
 
     .hero {
-        height: 165px;
+        height: 195px; /* era 165px */
     }
 
     .hero h1 {
-        font-size: 19px;
+        font-size: 30px;
     }
 
     .section {
@@ -663,23 +663,27 @@ p {
     }
 
     .history-text {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .stat-card {
-        min-height: 60px;
+        min-height: 72px;
     }
 
     .course-card {
-        min-height: 64px;
+        min-height: 76px;
     }
 
     .course-info h3 {
-        font-size: 10px;
+        font-size: 18px;
     }
 
     .course-info p {
-        font-size: 8px;
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        height: 100px; /* novo ajuste pra tela maior */
     }
 
 }
@@ -700,16 +704,16 @@ p {
     }
 
     .hero {
-        height: 220px;
+        height: 250px; /* era 220px */
     }
 
     .hero h1 {
-        font-size: 25px;
+        font-size: 34px;
         max-width: 450px;
     }
 
     .hero-small-title {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .section {
@@ -717,11 +721,11 @@ p {
     }
 
     .section h2 {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .history-text {
-        font-size: 12px;
+        font-size: 17px;
     }
 
     .statistics {
@@ -729,32 +733,49 @@ p {
     }
 
     .stat-card {
-        min-height: 75px;
+        min-height: 84px;
     }
 
     .stat-card strong {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .stat-card span {
-        font-size: 9px;
+        font-size: 13px;
     }
 
     .course-card {
-        min-height: 72px;
+        min-height: 84px;
     }
 
     .course-icon {
-        width: 32px;
-        height: 32px;
+        width: 42px; /* era 32px */
+        height: 42px; /* era 32px */
+        font-size: 20px;
     }
 
     .course-info h3 {
-        font-size: 12px;
+        font-size: 18px;
     }
 
     .course-info p {
-        font-size: 9px;
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        height: 130px; /* aumentado */
+    }
+
+    .structure-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
     }
 
 }
@@ -771,12 +792,20 @@ p {
     }
 
     .hero {
-        height: 280px;
+        height: 320px; /* era 280px */
+    }
+
+    .hero h1 {
+        font-size: 38px;
     }
 
     .section {
         padding-left: 35px;
         padding-right: 35px;
+    }
+
+    .gallery-image {
+        height: 160px;
     }
 
 }
