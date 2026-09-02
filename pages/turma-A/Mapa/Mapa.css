@@ -1,20 +1,291 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Afacad:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap');
 
 :root{
     font-size: 13px;
+
+    /* paleta baseada nas screenshots */
+    --bg-cream: #f1ede4;
+    --purple-strong: #5b2c68;
+    --purple-strong-dark: #4b2255;
+    --purple-muted: #b9a0c9;
+    --purple-muted-light: #d9cbe4;
+    --lavender-card: #f4f0f8;
+    --gray-text: #7d7a76;
+    --gray-light: #a49e93;
+    --card-address-bg: #e9e4da;
+
+    --dot-purple: #5b2c68;
+    --dot-green: #34c38f;
+    --dot-red: #e0507a;
+    --dot-teal: #17b3a3;
+    --dot-violet: #a06cd5;
+    --dot-blue: #3f8fd2;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 body{
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: var(--bg-cream);
+    margin: 0;
+    color: var(--gray-text);
 }
 
 main{
     font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
 h1{
-
+    font-family: "Afacad", "Ubuntu", sans-serif;
 }
 
+/* ---------- Navbar ---------- */
+.navbar{
+    background-color: var(--bg-cream);
+    padding: 1.2rem 1.5rem;
+    box-shadow: none;
+}
+
+.nav-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.avatar-icon{
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: var(--purple-muted-light);
+}
+
+.navbar-toggler{
+    border: none;
+    box-shadow: none !important;
+}
+
+/* ---------- Intro ---------- */
+.intro-strip{
+    padding: 0.5rem 1.5rem 1.8rem;
+}
+
+.intro-strip h1{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gray-light);
+    margin: 0 0 0.5rem;
+}
+
+.intro-strip p{
+    font-size: 1.05rem;
+    color: var(--gray-light);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ---------- Busca ---------- */
+.search-strip{
+    padding: 0 1.5rem 1.8rem;
+}
+
+.search-card{
+    background-color: var(--purple-strong);
+    border-radius: 1.6rem;
+    padding: 1.6rem 1.5rem;
+}
+
+.search-title{
+    font-family: "Afacad", "Ubuntu", sans-serif;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 0.7rem 1.1rem;
+}
+
+.search-icon{
+    opacity: 0.6;
+    font-size: 0.95rem;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    background: transparent;
+    color: var(--gray-text);
+}
+
+.search-box input::placeholder{
+    color: var(--gray-light);
+}
+
+/* ---------- Mapa (fora do escopo desta atualização) ---------- */
+.map{
+    padding: 0;
+}
+
+/* ---------- Legenda ---------- */
+.subtitles{
+    padding: 1.8rem 1.5rem;
+}
+
+.legend-card{
+    background-color: var(--purple-muted);
+    border-radius: 1.6rem;
+    padding: 1.4rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+}
+
+.legend-item{
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.dot{
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-purple{ background-color: var(--dot-purple); }
+.dot-green{ background-color: var(--dot-green); }
+.dot-red{ background-color: var(--dot-red); }
+.dot-teal{ background-color: var(--dot-teal); }
+.dot-violet{ background-color: var(--dot-violet); }
+.dot-blue{ background-color: var(--dot-blue); }
+
+/* ---------- Todos os Estandes ---------- */
+.booths{
+    padding: 0 1.5rem 1.8rem;
+}
+
+.booths-card{
+    background-color: var(--purple-muted);
+    border-radius: 1.6rem;
+    padding: 1.4rem 0 1.4rem;
+    overflow: hidden;
+}
+
+.booths-title{
+    font-family: "Afacad", "Ubuntu", sans-serif;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 1.6rem 1rem;
+}
+
+.booth-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--lavender-card);
+    border-radius: 1.2rem;
+    margin: 0 0.5rem;
+    overflow: hidden;
+}
+
+.booth-list li{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.booth-list li:last-child{
+    border-bottom: none;
+}
+
+.badge-letter{
+    flex-shrink: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.6rem;
+    background-color: var(--purple-strong);
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.booth-info strong{
+    display: block;
+    color: var(--purple-strong-dark);
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.booth-info p{
+    margin: 0.1rem 0 0;
+    font-size: 0.88rem;
+    color: var(--gray-text);
+}
+
+/* ---------- Endereço ---------- */
+.location{
+    padding: 0 1.5rem;
+}
+
+.location-card{
+    background-color: var(--card-address-bg);
+    border-radius: 1.6rem;
+    padding: 1.6rem 1.5rem;
+    text-align: center;
+}
+
+.pin-icon{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.7;
+}
+
+.location-card p{
+    margin: 0 0 1.1rem;
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.maps-btn{
+    background-color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 1.6rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #2b2b2b;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
