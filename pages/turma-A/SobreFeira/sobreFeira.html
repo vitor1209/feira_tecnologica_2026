@@ -7,30 +7,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../../reset.css" />
     <link rel="stylesheet" href="../../../index.css" />
+    <link rel="stylesheet" href="../../../components/Menu/Menu.css" />
     <link rel="stylesheet" href="SobreFeira.css" />
 
     <title>Sobre a Feira</title>
   </head>
 
   <body>
-    <header class="menu">
-      <div class="menu-container">
-        <a href="#" class="usuario" aria-label="Perfil">
-          <span>♙</span>
-        </a>
-
-        <nav class="menu-links">
-          <a href="#">Início</a>
-          <a href="#">Projetos</a>
-          <a href="#">Sobre a Feira</a>
-          <a href="#">Contato</a>
-        </nav>
-
-        <button class="menu-mobile" id="menuMobile" aria-label="Abrir menu">
-          ☰
-        </button>
-      </div>
-    </header>
+    <!-- Componente do Menu -->
+    <menu-component></menu-component>
 
     <main>
       <section class="introducao">
@@ -370,5 +355,8 @@
     </main>
 
     <script src="SobreFeira.js"></script>
+
+    <!-- Script do componente Menu.js -->
+    <script type="module" src="../../../components/Menu/Menu.js" defer></script>
   </body>
 </html>
