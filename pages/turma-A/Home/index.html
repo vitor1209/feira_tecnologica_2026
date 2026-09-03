@@ -1,363 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feira Tecnológica 2026 | Etec Professora Maria Cristina Medeiros</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Feira Tecnológica 2026 | Etec Professora Maria Cristina Medeiros
+    </title>
 
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Afacad:wght@500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Custom CSS -->
-<link href="index.css" rel="stylesheet">
-</head>
-<body>
+    <!-- Custom CSS -->
+    <link href="index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../components/Menu/Menu.css" />
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="#top" class="brand d-none d-md-flex"> Feira Tecnológica </a>
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header">
-  <div class="container d-flex align-items-center justify-content-between">
-
-    <a href="#top" class="brand d-none d-md-flex">
-      Feira Tecnológica
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
-
-<!-- mobile hamborgue -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="mainMenuLabel">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
-  </div>
-  <div class="offcanvas-body">
-    <nav class="nav flex-column gap-1">
-      <a class="nav-link-custom" href="#hero">Início</a>
-      <a class="nav-link-custom" href="#destaques">Projetos em destaque</a>
-      <a class="nav-link-custom" href="#categorias">Categorias</a>
-      <a class="nav-link-custom" href="#programacao">Programação</a>
-      <a class="nav-link-custom" href="#votar">Votar</a>
-    </nav>
-  </div>
-</div>
-
-<main id="top">
-
-  <!-- HERO  -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <span class="badge-pill">
-        <span class="badge-dot"></span> ETEC MCM
-      </span>
-
-      <h1 class="hero-title">
-        <span class="text-primary-c">Feira</span>
-        <span class="text-black-c">Tecnológica</span>
-        <span class="text-primary-c">2026</span>
-      </h1>
-
-      <p class="hero-text">
-        Explore projetos inovadores desenvolvidos por estudantes da nossa escola. Conheça as ideias que moldarão o futuro.
-      </p>
-
-      <a href="#destaques" class="btn btn-primary-c">
-        Explorar Projetos <i class="bi bi-arrow-right"></i>
-      </a>
-
-      <div class="hero-avatars">
-        <span class="avatar-chip chip-b">B</span>
-        <span class="avatar-chip chip-e">E</span>
+        <menu-component></menu-component>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- cpntagem regrressiva -->
-  <section class="countdown-section">
-    <div class="container text-center">
-      <p class="eyebrow eyebrow-light">Contagem regressiva</p>
-      <h2 class="section-title-light">A feira começa em</h2>
+    <main id="top">
+      <!-- HERO  -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <span class="badge-pill">
+            <span class="badge-dot"></span> ETEC MCM
+          </span>
 
-      <div class="countdown-grid" id="countdown">
-        <div class="countdown-box">
-          <span class="countdown-number" id="cd-days">00</span>
-          <span class="countdown-label">Dias</span>
+          <h1 class="hero-title">
+            <span class="text-primary-c">Feira</span>
+            <span class="text-black-c">Tecnológica</span>
+            <span class="text-primary-c">2026</span>
+          </h1>
+
+          <p class="hero-text">
+            Explore projetos inovadores desenvolvidos por estudantes da nossa
+            escola. Conheça as ideias que moldarão o futuro.
+          </p>
+
+          <a href="#destaques" class="btn btn-primary-c">
+            Explorar Projetos <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <div class="hero-avatars">
+            <span class="avatar-chip chip-b">B</span>
+            <span class="avatar-chip chip-e">E</span>
+          </div>
         </div>
-        <div class="countdown-box">
-          <span class="countdown-number" id="cd-hours">00</span>
-          <span class="countdown-label">Horas</span>
+      </section>
+
+      <!-- cpntagem regrressiva -->
+      <section class="countdown-section">
+        <div class="container text-center">
+          <p class="eyebrow eyebrow-light">Contagem regressiva</p>
+          <h2 class="section-title-light">A feira começa em</h2>
+
+          <div class="countdown-grid" id="countdown">
+            <div class="countdown-box">
+              <span class="countdown-number" id="cd-days">00</span>
+              <span class="countdown-label">Dias</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="cd-hours">00</span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="cd-minutes">00</span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="cd-seconds">00</span>
+              <span class="countdown-label">Segundos</span>
+            </div>
+          </div>
+
+          <p class="countdown-date">
+            26 de Setembro de 2026 - 09h00 — Etec Professora Maria Cristina
+            Medeiros
+          </p>
+
+          <p class="countdown-message" id="cd-message">
+            Contagem em andamento...
+          </p>
         </div>
-        <div class="countdown-box">
-          <span class="countdown-number" id="cd-minutes">00</span>
-          <span class="countdown-label">Minutos</span>
+      </section>
+
+      <!-- projetos destacados = -->
+      <section class="featured-section" id="destaques">
+        <div class="container text-center">
+          <p class="eyebrow">Destaques</p>
+          <h2 class="section-title">Projetos em Destaque</h2>
+
+          <div class="row justify-content-center g-4 project-grid">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="project-card reveal" data-anim="fade-up">
+                <div class="project-thumb">
+                  <span class="ods-badge ods-red">ODS 4</span>
+                  <span class="ods-badge ods-orange">ODS 9</span>
+                </div>
+                <div class="project-body text-start">
+                  <h3 class="project-title">Nome do projeto</h3>
+                  <p class="project-subtitle">Subtítulo</p>
+                  <p class="project-meta">
+                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
+                    Bloco: A
+                  </p>
+                  <p class="project-rating">
+                    Sua avaliação:
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star star-off"></i>
+                  </p>
+                  <button type="button" class="btn btn-primary-c w-100">
+                    Ver detalhes
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="project-card reveal" data-anim="zoom-in">
+                <div class="project-thumb">
+                  <span class="ods-badge ods-red">ODS 4</span>
+                  <span class="ods-badge ods-orange">ODS 9</span>
+                </div>
+                <div class="project-body text-start">
+                  <h3 class="project-title">Nome do projeto</h3>
+                  <p class="project-subtitle">Subtítulo</p>
+                  <p class="project-meta">
+                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
+                    Bloco: A
+                  </p>
+                  <p class="project-rating">
+                    Sua avaliação:
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star star-off"></i>
+                  </p>
+                  <button type="button" class="btn btn-primary-c w-100">
+                    Ver detalhes
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="project-card reveal" data-anim="slide-left">
+                <div class="project-thumb">
+                  <span class="ods-badge ods-red">ODS 4</span>
+                  <span class="ods-badge ods-orange">ODS 9</span>
+                </div>
+                <div class="project-body text-start">
+                  <h3 class="project-title">Nome do projeto</h3>
+                  <p class="project-subtitle">Subtítulo</p>
+                  <p class="project-meta">
+                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
+                    Bloco: A
+                  </p>
+                  <p class="project-rating">
+                    Sua avaliação:
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star-fill star-on"></i>
+                    <i class="bi bi-star star-off"></i>
+                  </p>
+                  <button type="button" class="btn btn-primary-c w-100">
+                    Ver detalhes
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <a href="#" class="see-all-link"
+            >Ver todos os projetos <i class="bi bi-arrow-right"></i
+          ></a>
         </div>
-        <div class="countdown-box">
-          <span class="countdown-number" id="cd-seconds">00</span>
-          <span class="countdown-label">Segundos</span>
+      </section>
+
+      <!--categorias -->
+      <section class="categories-section" id="categorias">
+        <div class="container text-center">
+          <p class="eyebrow">Áreas de conhecimento</p>
+          <h2 class="section-title">Categorias</h2>
+
+          <div class="row g-3 g-md-4 category-grid">
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-gear-fill"></i
+                ></span>
+                <span class="category-name">Automação</span>
+                <span class="category-count">8 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-heart-fill"></i
+                ></span>
+                <span class="category-name">Saúde &amp; Bem estar</span>
+                <span class="category-count">5 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-tree-fill"></i
+                ></span>
+                <span class="category-name">Meio Ambiente</span>
+                <span class="category-count">7 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-journal-bookmark-fill"></i
+                ></span>
+                <span class="category-name">Educação</span>
+                <span class="category-count">10 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-buildings-fill"></i
+                ></span>
+                <span class="category-name">Cidade Inteligente</span>
+                <span class="category-count">4 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-graph-up-arrow"></i
+                ></span>
+                <span class="category-name">Finanças</span>
+                <span class="category-count">3 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-shield-fill-check"></i
+                ></span>
+                <span class="category-name">Segurança</span>
+                <span class="category-count">6 projetos</span>
+              </a>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <a href="#" class="category-card">
+                <span class="category-icon"
+                  ><i class="bi bi-music-note-beamed"></i
+                ></span>
+                <span class="category-name">Entretenimento</span>
+                <span class="category-count">5 projetos</span>
+              </a>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- programação do dia da feira -->
+      <section class="schedule-section" id="programacao">
+        <div class="container">
+          <p class="eyebrow text-center">26 de Setembro</p>
+          <h2 class="section-title text-center">Programação do Dia</h2>
+
+          <ol class="schedule-timeline list-unstyled">
+            <li class="schedule-item">
+              <span class="schedule-time">08h30</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content">Abertura das portas</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">09h00</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content"
+                >Exposição dos Projetos nas salas</span
+              >
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">13h00</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content">Intervalo para Almoço</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">13h30</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content"
+                >Oficina: no Auditório: Grupo X</span
+              >
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">13h30</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content"
+                >Oficina: no Auditório: Grupo X</span
+              >
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">13h30</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content"
+                >Oficina: no Auditório: Grupo X</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- estatísticas tanana -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-4">
+              <div class="stat-icon"><i class="bi bi-stack"></i></div>
+              <p class="stat-number">48</p>
+              <p class="stat-label">Projetos Inscritos</p>
+            </div>
+            <div class="col-4">
+              <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+              <p class="stat-number">200+</p>
+              <p class="stat-label">Estudantes Participantes</p>
+            </div>
+            <div class="col-4">
+              <div class="stat-icon">
+                <i class="bi bi-clipboard-check-fill"></i>
+              </div>
+              <p class="stat-number">2.000+</p>
+              <p class="stat-label">Visitantes Esperados</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- votar -->
+      <section class="vote-section" id="votar">
+        <div class="container text-center">
+          <div class="vote-star"><i class="bi bi-star-fill"></i></div>
+          <h2 class="vote-title">Vote no seu<br />projeto favorito</h2>
+          <a href="#" class="btn btn-primary-c"
+            >Votar agora <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="site-footer">
+      <div class="container text-center">
+        <p class="mb-1">Feira Tecnológica 2026</p>
+        <p class="footer-small">Etec Professora Maria Cristina Medeiros</p>
       </div>
+    </footer>
 
-      <p class="countdown-date">
-        26 de Setembro de 2026 - 09h00 — Etec Professora Maria Cristina Medeiros
-      </p>
-
-      <p class="countdown-message" id="cd-message">Contagem em andamento...</p>
-    </div>
-  </section>
-
-  <!-- projetos destacados = -->
-  <section class="featured-section" id="destaques">
-    <div class="container text-center">
-      <p class="eyebrow">Destaques</p>
-      <h2 class="section-title">Projetos em Destaque</h2>
-
-      <div class="row justify-content-center g-4 project-grid">
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="project-card reveal" data-anim="fade-up">
-            <div class="project-thumb">
-              <span class="ods-badge ods-red">ODS 4</span>
-              <span class="ods-badge ods-orange">ODS 9</span>
-            </div>
-            <div class="project-body text-start">
-              <h3 class="project-title">Nome do projeto</h3>
-              <p class="project-subtitle">Subtítulo</p>
-              <p class="project-meta">Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp; Bloco: A</p>
-              <p class="project-rating">
-                Sua avaliação:
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star star-off"></i>
-              </p>
-              <button type="button" class="btn btn-primary-c w-100">Ver detalhes</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="project-card reveal" data-anim="zoom-in">
-            <div class="project-thumb">
-              <span class="ods-badge ods-red">ODS 4</span>
-              <span class="ods-badge ods-orange">ODS 9</span>
-            </div>
-            <div class="project-body text-start">
-              <h3 class="project-title">Nome do projeto</h3>
-              <p class="project-subtitle">Subtítulo</p>
-              <p class="project-meta">Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp; Bloco: A</p>
-              <p class="project-rating">
-                Sua avaliação:
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star star-off"></i>
-              </p>
-              <button type="button" class="btn btn-primary-c w-100">Ver detalhes</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <article class="project-card reveal" data-anim="slide-left">
-            <div class="project-thumb">
-              <span class="ods-badge ods-red">ODS 4</span>
-              <span class="ods-badge ods-orange">ODS 9</span>
-            </div>
-            <div class="project-body text-start">
-              <h3 class="project-title">Nome do projeto</h3>
-              <p class="project-subtitle">Subtítulo</p>
-              <p class="project-meta">Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp; Bloco: A</p>
-              <p class="project-rating">
-                Sua avaliação:
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star-fill star-on"></i>
-                <i class="bi bi-star star-off"></i>
-              </p>
-              <button type="button" class="btn btn-primary-c w-100">Ver detalhes</button>
-            </div>
-          </article>
-        </div>
-
-      </div>
-
-      <a href="#" class="see-all-link">Ver todos os projetos <i class="bi bi-arrow-right"></i></a>
-    </div>
-  </section>
-
-  <!--categorias -->
-  <section class="categories-section" id="categorias">
-    <div class="container text-center">
-      <p class="eyebrow">Áreas de conhecimento</p>
-      <h2 class="section-title">Categorias</h2>
-
-      <div class="row g-3 g-md-4 category-grid">
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-gear-fill"></i></span>
-            <span class="category-name">Automação</span>
-            <span class="category-count">8 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-heart-fill"></i></span>
-            <span class="category-name">Saúde &amp; Bem estar</span>
-            <span class="category-count">5 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-tree-fill"></i></span>
-            <span class="category-name">Meio Ambiente</span>
-            <span class="category-count">7 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-journal-bookmark-fill"></i></span>
-            <span class="category-name">Educação</span>
-            <span class="category-count">10 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-buildings-fill"></i></span>
-            <span class="category-name">Cidade Inteligente</span>
-            <span class="category-count">4 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-graph-up-arrow"></i></span>
-            <span class="category-name">Finanças</span>
-            <span class="category-count">3 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-shield-fill-check"></i></span>
-            <span class="category-name">Segurança</span>
-            <span class="category-count">6 projetos</span>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="category-card">
-            <span class="category-icon"><i class="bi bi-music-note-beamed"></i></span>
-            <span class="category-name">Entretenimento</span>
-            <span class="category-count">5 projetos</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- programação do dia da feira -->
-  <section class="schedule-section" id="programacao">
-    <div class="container">
-      <p class="eyebrow text-center">26 de Setembro</p>
-      <h2 class="section-title text-center">Programação do Dia</h2>
-
-      <ol class="schedule-timeline list-unstyled">
-        <li class="schedule-item">
-          <span class="schedule-time">08h30</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Abertura das portas</span>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">09h00</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Exposição dos Projetos nas salas</span>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">13h00</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Intervalo para Almoço</span>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">13h30</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Oficina: no Auditório: Grupo X</span>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">13h30</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Oficina: no Auditório: Grupo X</span>
-        </li>
-        <li class="schedule-item">
-          <span class="schedule-time">13h30</span>
-          <span class="schedule-dot" aria-hidden="true"></span>
-          <span class="schedule-content">Oficina: no Auditório: Grupo X</span>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- estatísticas tanana -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="row g-4 text-center">
-        <div class="col-4">
-          <div class="stat-icon"><i class="bi bi-stack"></i></div>
-          <p class="stat-number">48</p>
-          <p class="stat-label">Projetos Inscritos</p>
-        </div>
-        <div class="col-4">
-          <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
-          <p class="stat-number">200+</p>
-          <p class="stat-label">Estudantes Participantes</p>
-        </div>
-        <div class="col-4">
-          <div class="stat-icon"><i class="bi bi-clipboard-check-fill"></i></div>
-          <p class="stat-number">2.000+</p>
-          <p class="stat-label">Visitantes Esperados</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- votar -->
-  <section class="vote-section" id="votar">
-    <div class="container text-center">
-      <div class="vote-star"><i class="bi bi-star-fill"></i></div>
-      <h2 class="vote-title">Vote no seu<br>projeto favorito</h2>
-      <a href="#" class="btn btn-primary-c">Votar agora <i class="bi bi-arrow-right"></i></a>
-    </div>
-  </section>
-
-</main>
-
-<!-- footer -->
-<footer class="site-footer">
-  <div class="container text-center">
-    <p class="mb-1">Feira Tecnológica 2026</p>
-    <p class="footer-small">Etec Professora Maria Cristina Medeiros</p>
-  </div>
-</footer>
-
-<!-- Bootstrap 5 JS Bundle -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script src="index.js"></script>
-</body>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
