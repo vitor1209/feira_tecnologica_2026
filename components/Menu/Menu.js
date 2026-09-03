@@ -1,41 +1,29 @@
-const css = new CSSStyleSheet();
-await css.replace(await fetch('/components/Menu.css').then(r => r.text()));
-
 class Menu extends HTMLElement {
-    static PROJECT_PAGES = [
-        'home',
-        'sobreEtec',
-        'sobreFeira',
-        'mapa',
-        'projetos',
-        'projetosVisitados',
-        'ranking',
-        'votacao'
-    ];// Define paginas que podem ser selecionadas na propriedade 'page'
+  connectedCallback() {
+    this.innerHTML = `
+      <nav>
+        <button class="hamburgerBtn"></button>
+        <ul class="linksMenu-container">
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Projetos/Projetos.html">Projetos</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/ProjetosVisitados/ProjetosVisitados.html">Projetos Visitados</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Ranking/Ranking.html">Ranking</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Votacao/Votacao.html">Votação</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/Home/index.html">Home</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/Mapa/mapa.html">Mapa</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreEtec/sobreEtec.html">Sobre a Etec</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreFeira/sobreFeira.html">Sobre a Feira</a></li>
+        </ul>
+      </nav>
+    `;
 
-    connectedCallback() {
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets = [css]; // reaproveita a mesma folha compilada
-        this.shadowRoot.innerHTML = `<div class="badge">${this.getAttribute('tipo')}</div>`;
+    // registra o evento depois que o HTML já está no DOM
+    const nav = this.querySelector('nav');
+    const btn = this.querySelector('.hamburgerBtn');
 
-        const page = this.getAttribute('page');
-        const validPage = Menu.PROJECT_PAGES.includes(page) ? page : 'home'; // se colocar nome errado, usa home, por padrão
-
-        if (page && !Menu.PROJECT_PAGES.includes(page)) {
-            console.warn(`<menu> page="${page}" inválido. Use: ${Menu.PROJECT_PAGES.join(', ')}`);
-        }
-
-
-        this.render(validPage);
-
-
-        this.shadowRoot.innerHTML = `
-            <div class="card">
-                <h3>${page}</h3>
-                <slot></slot>
-            </div>
-        `;
-    }
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  }
 }
 
-customElements.define('menu', Menu);
+customElements.define('menu-component', Menu);

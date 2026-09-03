@@ -1,21 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS global -->
     <link rel="stylesheet" href="../../index.css">
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="./Ranking.css">
+
+    <!-- CSS dos componentes -->
+    <link rel="stylesheet" href="../../components/CardRanking/CardRanking.css">
+    <link rel="stylesheet" href="../../components/GraficoODS/GraficoODS.css">
+    <link rel="stylesheet" href="../../components/SearchBar/SearchBar.css">
+
     <title>Ranking</title>
 </head>
+
 <body>
-    <header>
-            
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="ranking-header">
+
+        <div class="ranking-header__breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>&gt;</span>
+            <span>Ranking</span>
+        </div>
+
+        <div class="ranking-header__content">
+            <h1>Placar da Feira</h1>
+
+            <p>
+                Confira que projeto está na frente nas votações!
+            </p>
+        </div>
+
+        <div class="ranking-header__estatisticas">
+
+            <div class="ranking-header__estatistica">
+                <strong>12</strong>
+                <span>Projetos votados</span>
+            </div>
+
+            <div class="ranking-header__estatistica">
+                <strong>232</strong>
+                <span>Votos totais recebidos</span>
+            </div>
+
+        </div>
+
     </header>
+
     <main>
-        <h1>Placar da Feira</h1>
+
+
+
+        <!-- =========================
+             ODS
+        ========================== -->
+
+        <section class="ranking-ods">
+
+            <h2>ODS mais Representadas</h2>
+
+            <div class="grafico-ods">
+                <div class="grafico-ods__container">
+                    <div
+                        id="graficoODS"
+                        class="grafico-ods__barras"
+                    ></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PÓDIO
+        ========================== -->
+
+        <section class="podio">
+
+            <h2 class="podio__titulo">
+                Pódio
+            </h2>
+
+            <div class="podio__container">
+
+                <!-- 2º lugar -->
+                <div class="podio__participante podio__participante--segundo">
+
+                    <div class="podio__nome">
+                        nome do<br>
+                        projeto
+                    </div>
+
+                    <div class="podio__bloco">
+                        <span>2º</span>
+                    </div>
+
+                </div>
+
+
+                <!-- 1º lugar -->
+                <div class="podio__participante podio__participante--primeiro">
+
+                    <div class="podio__avatar"></div>
+
+                    <div class="podio__nome">
+                        nome do<br>
+                        projeto
+                    </div>
+
+                    <div class="podio__bloco">
+                        <span>1º</span>
+                    </div>
+
+                </div>
+
+
+                <!-- 3º lugar -->
+                <div class="podio__participante podio__participante--terceiro">
+
+                    <div class="podio__nome">
+                        nome do<br>
+                        projeto
+                    </div>
+
+                    <div class="podio__bloco">
+                        <span>3º</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RANKING
+        ========================== -->
+
+        <section class="ranking-lista">
+
+            <h2>Ranking</h2>
+
+            <div id="barra-busca"></div>
+
+            <div id="products"></div>
+
+        </section>
 
     </main>
-    <footer>
 
+
+    <footer>
     </footer>
+
+
+    <!-- JavaScript -->
+    <script type="module" src="./Ranking.js"></script>
+    <script src="../../components/SearchBar/SearchBar.js"></script>
+
 </body>
+
 </html>
