@@ -5,7 +5,7 @@ html {
 * {
     box-sizing: border-box;
 
-    color: #311041;
+    color: #311041 !important;
     font-family: "Ubuntu", sans-serif;
 }
 
@@ -46,11 +46,12 @@ nav {
 
     border-bottom: 2px solid #e07b5f00;
     transition: all 0.3s ease;
+    color: #311041 !important;
 }
 
 .linkMenu:hover {
     cursor: pointer;
-    color: #9900F2;
+    color: #9900F2 !important;
 }
 
 .hamburgerBtn {
@@ -120,7 +121,7 @@ nav {
 
     .linkMenu:hover {
         cursor: pointer;
-        color: #9900F2;
+        color: #9900F2 !important;
     }
 
     .linkMenu:nth-child(1) {

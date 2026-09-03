@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -427,6 +428,7 @@ img {
    ========================================================= */
 .featured-section {
   padding: 3.5rem 0 3rem;
+  overflow-x: hidden;
 }
 
 .project-grid {
