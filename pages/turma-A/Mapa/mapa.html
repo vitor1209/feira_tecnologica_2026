@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,386 @@
 
     <title>Mapa da Feira</title>
 </head>
-<body>
-    
 
-    <!-- JS -->
-     <script src="Mapa.js"></script>
+<body>
+
+    <main class="container-mapa">
+
+        <!-- Breadcrumb & Cabeçalho -->
+        <p class="breadcrumb">
+            Home <span>›</span> Mapa
+        </p>
+
+        <header class="cabecalho">
+            <h1>Mapa da feira tecnológica 2026</h1>
+            <p class="descricao">
+                Navegue pelo mapa e encontre o estande do projeto que deseja visitar.
+            </p>
+        </header>
+
+        <!-- Seção Principal: Mapa e Seleção de Bloco -->
+        <!-- Seção Principal: Mapa SVG e Seleção de Bloco -->
+        <section class="secao-mapa">
+            <div class="mapa-wrapper">
+                <div class="mapa-container" id="mapa-container">
+                    <!-- SVG Vetorial do Mapa -->
+                    <svg id="svg-mapa" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Estilos Internos do SVG -->
+                        <style>
+                            .parede {
+                                fill: #ffffff;
+                                stroke: #1a1a1a;
+                                stroke-width: 2.5;
+                                stroke-linejoin: round;
+                            }
+
+                            .texto-sala {
+                                font-family: 'Inter', sans-serif;
+                                font-weight: bold;
+                                fill: #1a1a1a;
+                                text-anchor: middle;
+                                dominant-baseline: middle;
+                            }
+
+                            .ponto-azul {
+                                fill: #1d2a6b;
+                            }
+
+                            .ponto-vermelho {
+                                fill: #e55353;
+                            }
+
+                            .ponto-marrom {
+                                fill: #6b1d1d;
+                            }
+
+                            /* Destaque de Blocos via JS */
+                            .bloco-a-elem,
+                            .bloco-b-elem {
+                                transition: opacity 0.3s ease, fill 0.3s ease;
+                            }
+
+                            .escondido {
+                                opacity: 0.2;
+                            }
+
+                            .selecionado-bloco {
+                                fill: #f3e8f7 !important;
+                            }
+                        </style>
+
+                        <!-- Moldura Externa -->
+                        <rect x="100" y="20" width="560" height="410" class="parede" />
+
+                        <!-- Quadra -->
+                        <rect x="30" y="20" width="130" height="110" class="parede" />
+                        <text x="95" y="75" font-size="20" class="texto-sala">quadra</text>
+
+                        <!-- Blocos e Salas (Bloco A) -->
+                        <g id="grupo-bloco-a" class="bloco-a-elem">
+                            <rect x="230" y="130" width="70" height="50" class="parede sala-node" data-sala="2A" />
+                            <text x="265" y="155" font-size="14" class="texto-sala">2÷01</text>
+
+                            <rect x="300" y="130" width="80" height="50" class="parede sala-node" data-sala="1A" />
+                            <text x="340" y="155" font-size="14" class="texto-sala">1÷01</text>
+
+                            <rect x="380" y="130" width="80" height="50" class="parede sala-node" data-sala="1B" />
+                            <text x="420" y="155" font-size="14" class="texto-sala">1÷02</text>
+
+                            <rect x="460" y="130" width="80" height="50" class="parede sala-node" data-sala="1C" />
+                            <text x="500" y="155" font-size="14" class="texto-sala">1÷03</text>
+
+                            <rect x="540" y="130" width="90" height="50" class="parede" />
+                            <text x="585" y="155" font-size="26" class="texto-sala">?</text>
+                        </g>
+
+                        <!-- Salas Corredor Esquerdo (Bloco B) -->
+                        <g id="grupo-bloco-b" class="bloco-b-elem">
+                            <rect x="100" y="130" width="70" height="60" class="parede sala-node" data-sala="3A" />
+                            <text x="135" y="160" font-size="14" class="texto-sala">3÷01</text>
+
+                            <rect x="100" y="190" width="70" height="60" class="parede sala-node" data-sala="3B" />
+                            <text x="135" y="220" font-size="14" class="texto-sala">3÷02</text>
+
+                            <rect x="100" y="250" width="70" height="60" class="parede sala-node" data-sala="3C" />
+                            <text x="135" y="280" font-size="14" class="texto-sala">3÷03</text>
+
+                            <rect x="100" y="310" width="70" height="40" class="parede" />
+                        </g>
+
+                        <!-- Salas Centro -->
+                        <rect x="230" y="180" width="70" height="50" class="parede" />
+                        <text x="265" y="205" font-size="14" class="texto-sala">2÷02</text>
+
+                        <rect x="230" y="230" width="70" height="50" class="parede" />
+                        <text x="265" y="255" font-size="14" class="texto-sala">2÷03</text>
+
+                        <rect x="230" y="280" width="70" height="70" class="parede" />
+                        <text x="265" y="315" font-size="16" class="texto-sala">porão</text>
+
+                        <!-- Biblioteca e Banheiros -->
+                        <rect x="300" y="280" width="90" height="70" class="parede" />
+                        <text x="345" y="315" font-size="13" class="texto-sala">biblioteca</text>
+
+                        <rect x="390" y="280" width="90" height="35" class="parede" />
+                        <text x="435" y="293" font-size="10" class="texto-sala">banheiro</text>
+                        <text x="435" y="305" font-size="10" class="texto-sala">masculino</text>
+
+                        <rect x="390" y="315" width="90" height="35" class="parede" />
+                        <text x="435" y="328" font-size="10" class="texto-sala">banheiro</text>
+                        <text x="435" y="340" font-size="10" class="texto-sala">feminino</text>
+
+                        <!-- Secretaria e Diretoria -->
+                        <rect x="570" y="230" width="60" height="30" class="parede" />
+                        <text x="600" y="240" font-size="9" class="texto-sala">sala</text>
+                        <text x="600" y="250" font-size="9" class="texto-sala">do diretor</text>
+
+                        <path d="M 540 280 L 630 280 L 630 340 L 530 340 L 530 300 L 560 300 L 560 280 Z"
+                            class="parede" />
+                        <text x="580" y="310" font-size="13" class="texto-sala">secretária</text>
+
+                        <!-- Escadas -->
+                        <g transform="translate(550, 360)">
+                            <rect x="0" y="0" width="80" height="40" class="parede" />
+                            <line x1="10" y1="0" x2="10" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="20" y1="0" x2="20" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="30" y1="0" x2="30" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="40" y1="0" x2="40" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="50" y1="0" x2="50" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="60" y1="0" x2="60" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                            <line x1="70" y1="0" x2="70" y2="40" stroke="#1a1a1a" stroke-width="1.5" />
+                        </g>
+                        <text x="480" y="380" font-size="13" class="texto-sala">escadas-></text>
+
+                        <!-- Portão Entrada -->
+                        <rect x="220" y="418" width="110" height="12" fill="#ffffff" stroke="#1a1a1a"
+                            stroke-width="2" />
+
+                        <!-- Indicadores/Pontos coloridos da imagem -->
+                        <circle cx="180" cy="225" r="7" class="ponto-azul" />
+                        <circle cx="195" cy="232" r="7" class="ponto-vermelho" />
+                        <circle cx="345" cy="335" r="7" class="ponto-marrom" />
+                    </svg>
+                </div>
+
+                <!-- Controle de Zoom em pílula -->
+                <div class="controles-zoom">
+                    <button type="button" class="btn-zoom" id="zoom-out">−</button>
+                    <span id="zoom-porcentagem">100%</span>
+                    <button type="button" class="btn-zoom" id="zoom-in">+</button>
+                </div>
+            </div>
+
+            <!-- Botões Selecionáveis do Mapa (Alternáveis) -->
+            <aside class="selecao-blocos">
+                <button type="button" class="btn-bloco ativo" data-bloco="geral">
+                    <span class="indicador-cor cor-geral"></span>
+                    <span>Mapa geral</span>
+                </button>
+
+                <button type="button" class="btn-bloco" data-bloco="bloco-a">
+                    <span class="indicador-cor cor-bloco-a"></span>
+                    <span>Bloco A</span>
+                </button>
+
+                <button type="button" class="btn-bloco" data-bloco="bloco-b">
+                    <span class="indicador-cor cor-bloco-b"></span>
+                    <span>Bloco B</span>
+                </button>
+            </aside>
+        </section>
+
+        <!-- Seção de Busca e Filtros -->
+        <section class="secao-busca">
+            <div class="titulo-busca">
+                <h2>Encontre os projetos que tem interesse!</h2>
+                <p>Confira as salas que estão cada projeto.</p>
+            </div>
+
+            <!-- Linha de Busca + Leitor QR Code -->
+            <div class="linha-busca-qr">
+                <div class="container-busca">
+                    <span class="icone-busca">⌕</span>
+                    <input type="text" id="campo-busca" placeholder="Buscar projetos, cursos ou salas..."
+                        autocomplete="off">
+                </div>
+
+                <button type="button" class="btn-qr">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                        <line x1="18" y1="7" x2="18.01" y2="7"></line>
+                        <line x1="7" y1="18" x2="7.01" y2="18"></line>
+                        <line x1="18" y1="18" x2="18.01" y2="18"></line>
+                    </svg>
+                    <span>Ler QR Code</span>
+                </button>
+            </div>
+
+            <!-- Filtros em Dropdown com Opções -->
+            <div class="grid-filtros">
+                <!-- ODS 1 a 17 -->
+                <div class="select-container">
+                    <select id="filtro-ods">
+                        <option value="">Todas as ODS</option>
+                        <option value="1">ODS 1 - Erradicação da Pobreza</option>
+                        <option value="2">ODS 2 - Fome Zero e Agricultura Sustentável</option>
+                        <option value="3">ODS 3 - Saúde e Bem-Estar</option>
+                        <option value="4">ODS 4 - Educação de Qualidade</option>
+                        <option value="5">ODS 5 - Igualdade de Gênero</option>
+                        <option value="6">ODS 6 - Água Potável e Saneamento</option>
+                        <option value="7">ODS 7 - Energia Limpa e Acessível</option>
+                        <option value="8">ODS 8 - Trabalho Decente e Crescimento Econômico</option>
+                        <option value="9">ODS 9 - Indústria, Inovação e Infraestrutura</option>
+                        <option value="10">ODS 10 - Redução das Desigualdades</option>
+                        <option value="11">ODS 11 - Cidades e Comunidades Sustentáveis</option>
+                        <option value="12">ODS 12 - Consumo e Produção Responsáveis</option>
+                        <option value="13">ODS 13 - Ação Contra a Mudança Global do Clima</option>
+                        <option value="14">ODS 14 - Vida na Água</option>
+                        <option value="15">ODS 15 - Vida Terrestre</option>
+                        <option value="16">ODS 16 - Paz, Justiça e Instituições Eficazes</option>
+                        <option value="17">ODS 17 - Parcerias e Meios de Implementação</option>
+                    </select>
+                </div>
+
+                <!-- Blocos A e B -->
+                <div class="select-container">
+                    <select id="filtro-blocos">
+                        <option value="">Todos os blocos</option>
+                        <option value="bloco-a">Bloco A</option>
+                        <option value="bloco-b">Bloco B</option>
+                    </select>
+                </div>
+
+                <!-- Cursos -->
+                <div class="select-container">
+                    <select id="filtro-cursos">
+                        <option value="">Todos os cursos</option>
+                        <option value="informatica">Informática para Internet</option>
+                        <option value="rh">Recursos Humanos</option>
+                        <option value="administracao">Administração</option>
+                        <option value="logistica">Logística</option>
+                        <option value="quimica">Química</option>
+                    </select>
+                </div>
+
+                <!-- Turmas (1A até 3E) -->
+                <div class="select-container">
+                    <select id="filtro-turmas">
+                        <option value="">Todas as turmas</option>
+                        <!-- 1º Ano -->
+                        <option value="1a">1º A</option>
+                        <option value="1b">1º B</option>
+                        <option value="1c">1º C</option>
+                        <option value="1d">1º D</option>
+                        <option value="1e">1º E</option>
+                        <option value="1f">1º F</option>
+
+                        <!-- 2º Ano -->
+                        <option value="2a">2º A</option>
+                        <option value="2b">2º B</option>
+                        <option value="2c">2º C</option>
+                        <option value="2d">2º D</option>
+                        <option value="2e">2º E</option>
+                        <option value="2f">2º F</option>
+
+                        <!-- 3º Ano -->
+                        <option value="3a">3º A</option>
+                        <option value="3b">3º B</option>
+                        <option value="3c">3º C</option>
+                        <option value="3d">3º D</option>
+                        <option value="3e">3º E</option>
+                        <option value="3f">3º F</option>
+
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Cartões dos Projetos -->
+        <!-- Grid de Cartões dos Projetos -->
+        <section class="grid-projetos" id="lista-estandes">
+
+            <!-- Projeto 1 -->
+            <article class="cartao-projeto">
+                <div class="sala-tag">
+                    <span class="sala-numero">2A</span>
+                </div>
+
+                <div class="conteudo-projeto">
+                    <div class="topo-card">
+                        <div class="info-principal">
+                            <h3>Nome do projeto</h3>
+                            <p class="subtitulo-projeto">Subtítulo do projeto aqui</p>
+                        </div>
+                        <span class="badge-status status-nao-visitado">Não visitado</span>
+                    </div>
+
+                    <div class="tags-projeto">
+                        <span class="tag-info">ODS 4</span>
+                        <span class="tag-info">Bloco A</span>
+                        <span class="tag-info">Informática</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projeto 2 -->
+            <article class="cartao-projeto">
+                <div class="sala-tag">
+                    <span class="sala-numero">3B</span>
+                </div>
+
+                <div class="conteudo-projeto">
+                    <div class="topo-card">
+                        <div class="info-principal">
+                            <h3>Nome do projeto</h3>
+                            <p class="subtitulo-projeto">Subtítulo do projeto aqui</p>
+                        </div>
+                        <span class="badge-status status-visitado">Visitado</span>
+                    </div>
+
+                    <div class="tags-projeto">
+                        <span class="tag-info">ODS 9</span>
+                        <span class="tag-info">Bloco B</span>
+                        <span class="tag-info">Química</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projeto 3 -->
+            <article class="cartao-projeto">
+                <div class="sala-tag">
+                    <span class="sala-numero">1C</span>
+                </div>
+
+                <div class="conteudo-projeto">
+                    <div class="topo-card">
+                        <div class="info-principal">
+                            <h3>Nome do projeto</h3>
+                            <p class="subtitulo-projeto">Subtítulo do projeto aqui</p>
+                        </div>
+                        <span class="badge-status status-nao-visitado">Não visitado</span>
+                    </div>
+
+                    <div class="tags-projeto">
+                        <span class="tag-info">ODS 11</span>
+                        <span class="tag-info">Bloco A</span>
+                        <span class="tag-info">Administração</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="Mapa.js"></script>
+
+
 </body>
+
 </html>
