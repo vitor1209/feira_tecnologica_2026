@@ -1,34 +1,41 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 body {
-   min-height: 100vh;
-   background-color: #f5f3ed;
-   color: #3f1952;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    background-color: #f5f3ed;
+    color: #3f1952;
 }
 
-.pagina{
+.pagina {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 14px 30px;
+    padding: 20px 30px;
 }
+
+/* CABEÇALHO */
 
 .cabecalho {
     width: 100%;
-    height: 55px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.botao-voltar{
-    width: 30px;
-    height: 30px;
+/* BOTÃO VOLTAR */
+
+.botao-voltar {
+    width: 42px;
+    height: 42px;
     border: none;
     background: transparent;
     position: relative;
@@ -38,120 +45,151 @@ body {
 .botao-voltar::after {
     content: "";
     position: absolute;
-    width: 22px;
-    height: 1px;
+    width: 30px;
+    height: 2px;
     background-color: #888;
-    top: 15px;
-    left: 4px;
+    top: 20px;
+    left: 5px;
 }
 
 .botao-voltar::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border-left: 1px solid #888;
-    border-bottom: 1px solid #888;
+    width: 13px;
+    height: 13px;
+    border-left: 2px solid #888;
+    border-bottom: 2px solid #888;
     transform: rotate(45deg);
-    top: 10px;
-    left: 5px;
-
+    top: 14px;
+    left: 6px;
 }
 
-.logo{
-    width: 45px;
-    height: 45px;
-    border: 2px solid #aaa;
-    border-radius: 50%;
+/* LOGO */
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #999;
-    position: relative;
+    justify-content: right;
 }
 
-.logo::before{
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    border: 1px solid #aaa;
+.logo img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    object-fit: cover;
     border-radius: 50%;
 }
 
-.logo span{
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 1;
-}
 
-.opcoes{
+/* OPÇÕES */
+
+.opcoes {
     width: 100%;
-    margin-top: 68px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 
-.card{
+/* CARD */
+
+.card {
     width: 100%;
-    min-height: 81px;
+    min-height: 170px;
     background-color: #ffffff;
-    border-radius: 13px;
-    padding: 11px 24px 8px;
-    box-shadow: 0 2px 4px rgba(0, 0 , 0, 0.12);
+    border-radius: 18px;
+    padding: 25px 30px 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
     display: flex;
     flex-direction: column;
 }
 
-.card h2{
-    font-size: 10px;
+/* TÍTULO */
+
+.card h2 {
+    font-size: 24px;
     font-weight: 700;
     color: #4b1d60;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
+/* DESCRIÇÃO */
+
 .card p {
-    font-size: 7px;
-    line-height: 1.35;
+    font-size: 16px;
+    line-height: 1.4;
     color: #8b8b8b;
-    min-height: 17px;
+    min-height: 45px;
 }
+
+/* BOTÃO */
 
 .btn-entrar {
     width: 100%;
-    height: 25px;
-    margin-top: 5px;
+    height: 45px;
+    margin-top: 15px;
+
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
+
     background-color: #5c2675;
     color: #ffffff;
-    font-size: 9px;
+
+    font-size: 16px;
     font-weight: bold;
+
     cursor: pointer;
-    transition: background color 0.2s ease, transform 0.1s ease;
+
+    transition: background-color 0.2s ease,
+                transform 0.1s ease;
 }
 
 .btn-entrar:hover {
     background-color: #4b1d60;
 }
 
-.btn-entrar:activate {
+.btn-entrar:active {
     transform: scale(0.98);
 }
 
+/* CELULAR */
+
 @media (max-width: 400px) {
+
     .pagina {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cabecalho {
+        height: 70px;
+    }
+
+    .logo img {
+        width: 150px;
     }
 
     .opcoes {
-        margin-top: 68px;
+        margin-top: 55px;
+        gap: 20px;
     }
 
     .card {
-        padding-left: 24px;
-        padding-right: 24px;
+        min-height: 160px;
+        padding: 22px 24px 18px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .btn-entrar {
+        height: 43px;
+        font-size: 15px;
     }
 }
