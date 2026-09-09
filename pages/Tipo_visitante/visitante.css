@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    background-color: #f5f3ed;
+    color: #3f1952;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BOTÃO VOLTAR */
+
+.botao-voltar {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.botao-voltar::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #888;
+    top: 20px;
+    left: 5px;
+}
+
+.botao-voltar::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-left: 2px solid #888;
+    border-bottom: 2px solid #888;
+    transform: rotate(45deg);
+    top: 14px;
+    left: 6px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.logo img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* OPÇÕES */
+
+.opcoes {
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* CARD */
+
+.card {
+    width: 100%;
+    min-height: 170px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 25px 30px 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO */
+
+.card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4b1d60;
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+
+.card p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #8b8b8b;
+    min-height: 45px;
+}
+
+/* BOTÃO */
+
+.btn-entrar {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #5c2675;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                transform 0.1s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #4b1d60;
+}
+
+.btn-entrar:active {
+    transform: scale(0.98);
+}
+
+/* CELULAR */
+
+@media (max-width: 400px) {
+
+    .pagina {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .cabecalho {
+        height: 70px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .opcoes {
+        margin-top: 55px;
+        gap: 20px;
+    }
+
+    .card {
+        min-height: 160px;
+        padding: 22px 24px 18px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .btn-entrar {
+        height: 43px;
+        font-size: 15px;
+    }
+}
