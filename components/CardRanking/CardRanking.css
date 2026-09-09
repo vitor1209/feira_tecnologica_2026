@@ -66,10 +66,6 @@
     flex-wrap: wrap;
 }
 
-.ranking-ods {
-    display: flex;
-    gap: 5px;
-}
 
 .ods-tag,
 .ranking-localizacao {

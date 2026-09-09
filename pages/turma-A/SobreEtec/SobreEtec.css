@@ -1,0 +1,811 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F3F1EB;
+    color: #311041;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: "Afacad", sans-serif;
+}
+
+p {
+    font-family: "Ubuntu", sans-serif;
+    color: #311041;
+}
+
+
+/* =========================================================
+   CORES PRINCIPAIS
+========================================================= */
+
+:root {
+    --purple: #5a147c;
+    --purple-dark: #43105f;
+    --purple-light: #eee5f2;
+
+    --background: #F3F1EB;
+    --card: #f8f7f3;
+
+    --text: #311041;
+    --text-light: #77727a;
+
+    --border: #dfdce0;
+
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    height: 42px;
+
+    background: var(--background);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* botão */
+
+.menu-button {
+    width: 32px; /* era 28px */
+    height: 32px; /* era 28px */
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px; /* era 4px */
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 18px; /* era 15px */
+    height: 2px;
+
+    background: #777;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+/* animação do botão */
+
+.menu-button.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 42px;
+    right: -100%;
+
+    width: 75%;
+    max-width: 300px;
+
+    background: #fff;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.12);
+
+    z-index: 99;
+
+    transition: right 0.3s ease;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    color: #311041;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 5px 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 100%;
+    height: 170px; /* era 140px */
+
+    position: relative;
+
+    background-image:
+        url("./img/img2.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(40, 15, 50, 0.35),
+            rgba(90, 20, 124, 0.65)
+        );
+}
+
+.hero-content {
+    position: absolute;
+
+    left: 15px;
+    bottom: 22px;
+
+    color: white;
+
+    width: calc(100% - 30px);
+}
+
+.hero-small-title {
+    display: block;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 11px;
+
+    margin-bottom: 5px;
+
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-family: "Afacad", sans-serif;
+
+    font-size: 26px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: white;
+
+    max-width: 280px;
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.section {
+    width: 100%;
+
+    padding: 25px 10px 0;
+}
+
+.section h2 {
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+
+/* =========================================================
+   HISTÓRIA
+========================================================= */
+
+.history-text {
+    color: #311041;
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   ESTATÍSTICAS
+========================================================= */
+
+.statistics {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 17px;
+}
+
+.stat-card {
+    min-height: 68px; /* era 62px */
+
+    background: var(--card);
+
+    border: 1px solid #e7e4e7;
+
+    border-radius: var(--radius-medium);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card strong {
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+.stat-card span {
+    color: #69636d;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CURSOS
+========================================================= */
+
+.course-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.course-card {
+    min-height: 72px; /* era 66px */
+
+    background: var(--card);
+
+    border: 1px solid #e4e0e5;
+
+    border-radius: var(--radius-medium);
+
+    padding: 12px; /* era 10px */
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px; /* era 10px */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.course-icon {
+    width: 36px; /* era 25px */
+    height: 36px; /* era 25px */
+
+    flex-shrink: 0;
+
+    border-radius: 8px; /* era 6px */
+
+    background: var(--purple);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px; /* era 12px */
+}
+
+.course-info h3 {
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.course-info p {
+    color: #311041;
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ESTRUTURA
+========================================================= */
+
+.structure-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.structure-item {
+    min-height: 52px; /* era 46px */
+
+    background: var(--card);
+
+    border: 1px solid #e5e2e5;
+
+    border-radius: 9px;
+
+    padding: 8px 12px; /* era 7px 10px */
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px; /* era 10px */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.structure-icon {
+    width: 32px; /* era 22px */
+    height: 32px; /* era 22px */
+
+    border-radius: 8px; /* era 6px */
+
+    background: var(--purple);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px; /* era 14px */
+
+    flex-shrink: 0;
+}
+
+.structure-item span {
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PREMIAÇÕES
+========================================================= */
+
+.awards-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.award-card {
+    min-height: 50px; /* era 44px */
+
+    background: var(--card);
+
+    border: 1px solid #e4e1e5;
+
+    border-radius: 9px;
+
+    padding: 8px 12px; /* era 7px 10px */
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px; /* era 8px */
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.award-medal {
+    font-size: 22px; /* era 16px */
+}
+
+.award-card p {
+    color: #311041;
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 6px; /* era 4px */
+
+    margin-bottom: 12px;
+}
+
+.gallery-image {
+    height: 90px; /* era 44px — estava bem pequeno */
+
+    border-radius: 9px; /* era 7px */
+
+    background-size: cover;
+    background-position: center;
+}
+
+.image-one {
+    background-image:
+        url("./img/img1.jpg");
+}
+
+.image-two {
+    background-image:
+        url("./img/img2.jpg");
+}
+
+.image-three {
+    background-image:
+        url("./img/img1.jpg");
+}
+
+
+/* =========================================================
+   CARD DE CONTATO
+========================================================= */
+
+.visit-card {
+    background: var(--card);
+
+    border: 1px solid #e2dfe2;
+
+    border-radius: var(--radius-medium);
+
+    padding: 16px 14px; /* era 15px 12px */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.visit-card h3 {
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 16px;
+
+    margin-bottom: 16px; /* era 15px */
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px; /* era 9px */
+
+    margin-bottom: 14px; /* era 13px */
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 32px; /* era 23px */
+    height: 32px; /* era 23px */
+
+    background: var(--purple);
+
+    color: white;
+
+    border-radius: 8px; /* era 6px */
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px; /* era 10px */
+
+    flex-shrink: 0;
+}
+
+.contact-title {
+    display: block;
+
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 3px;
+}
+
+.contact-item p {
+    color: #311041;
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    text-align: center;
+
+    padding: 30px 10px 20px;
+
+    color: #77727a;
+    font-family: "Afacad", sans-serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+
+/* celulares maiores */
+
+@media (min-width: 400px) {
+
+    .header {
+        height: 48px;
+    }
+
+    .mobile-menu {
+        top: 48px;
+    }
+
+    .hero {
+        height: 195px; /* era 165px */
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .history-text {
+        font-size: 16px;
+    }
+
+    .stat-card {
+        min-height: 72px;
+    }
+
+    .course-card {
+        min-height: 76px;
+    }
+
+    .course-info h3 {
+        font-size: 18px;
+    }
+
+    .course-info p {
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        height: 100px; /* novo ajuste pra tela maior */
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (min-width: 600px) {
+
+    body {
+        max-width: 600px;
+        margin: 0 auto;
+
+        box-shadow:
+            0 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero {
+        height: 250px; /* era 220px */
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        max-width: 450px;
+    }
+
+    .hero-small-title {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 35px 25px 0;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .history-text {
+        font-size: 17px;
+    }
+
+    .statistics {
+        gap: 12px;
+    }
+
+    .stat-card {
+        min-height: 84px;
+    }
+
+    .stat-card strong {
+        font-size: 20px;
+    }
+
+    .stat-card span {
+        font-size: 13px;
+    }
+
+    .course-card {
+        min-height: 84px;
+    }
+
+    .course-icon {
+        width: 42px; /* era 32px */
+        height: 42px; /* era 32px */
+        font-size: 20px;
+    }
+
+    .course-info h3 {
+        font-size: 18px;
+    }
+
+    .course-info p {
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        height: 130px; /* aumentado */
+    }
+
+    .structure-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 900px) {
+
+    body {
+        max-width: 700px;
+    }
+
+    .hero {
+        height: 320px; /* era 280px */
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .gallery-image {
+        height: 160px;
+    }
+
+}
