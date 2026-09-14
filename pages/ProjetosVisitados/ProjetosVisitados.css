@@ -1,0 +1,155 @@
+/* ============================= */
+/* GERAL */
+/* ============================= */
+
+body {
+    margin: 0;
+
+    font-family: "Afacad", sans-serif;
+
+    color: #30123d;
+}
+
+
+/* ============================= */
+/* PÁGINA */
+/* ============================= */
+
+.pagina-projetos {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 24px 14px 45px;
+}
+
+
+/* ============================= */
+/* CABEÇALHO */
+/* ============================= */
+
+.cabecalho-projetos {
+    margin-bottom: 20px;
+}
+
+.ranking-header__breadcrumb{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 28px;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 18px;
+
+    color: #777;
+
+    margin: 0 4px;
+}
+
+a {
+    color: #777;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    margin: 0 3px;
+}
+
+
+.cabecalho-projetos h1 {
+    margin: 0;
+
+    font-family: "Ubuntu", sans-serif;
+
+    font-size: 30px;
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #3d1450;
+}
+
+
+.descricao-projetos {
+    width: 230px;
+
+    margin: 5px 0 0;
+
+    font-size: 15px;
+    line-height: 1.15;
+
+    color: #4d3156;
+}
+
+/* ============================= */
+/* GRID DOS CARDS */
+/* ============================= */
+
+.grid-projetos {
+    width: 100%;
+
+    display: grid;
+
+    /*
+     * Os cards possuem aproximadamente 260px.
+     * O grid cria automaticamente a quantidade
+     * de colunas que couber na largura disponível.
+     */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 260px)
+    );
+
+    gap: 24px;
+
+    justify-content: center;
+
+    align-items: start;
+
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* NENHUM PROJETO */
+/* ============================= */
+
+.nenhum-projeto {
+    margin: 0;
+
+    font-size: 11px;
+
+    color: #6b586f;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/*
+ * Em telas menores, permitimos que o card
+ * ocupe toda a largura disponível.
+ */
+
+@media (max-width: 600px) {
+
+    .grid-projetos {
+        grid-template-columns: minmax(0, 260px);
+    }
+
+}
+
+
+/*
+ * Em celulares muito pequenos,
+ * o card passa a acompanhar a largura da tela.
+ */
+
+@media (max-width: 300px) {
+
+    .grid-projetos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+}
