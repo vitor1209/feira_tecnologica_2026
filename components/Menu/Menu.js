@@ -8,7 +8,7 @@ class Menu extends HTMLElement {
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/ProjetosVisitados/ProjetosVisitados.html">Projetos Visitados</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/Ranking/Ranking.html">Ranking</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/Votacao/Votacao.html">Votação</a></li>
-          <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/Home/index.html">Home</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/index.html">Home</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/Mapa/mapa.html">Mapa</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreEtec/sobreEtec.html">Sobre a Etec</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreFeira/sobreFeira.html">Sobre a Feira</a></li>
