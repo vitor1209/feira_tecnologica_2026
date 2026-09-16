@@ -347,7 +347,7 @@ img {
 
 .countdown-date {
   color: var(--light-purple);
-  font-size: 0.8rem;
+  font-size: 1rem;
   max-width: 380px;
   margin: 0 auto;
   line-height: 1.5;
@@ -701,7 +701,7 @@ img {
   background-color: var(--gray);
   border-radius: var(--radius-sm);
   padding: 0.85rem 1.1rem;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--black);
   width: 100%;
@@ -737,7 +737,7 @@ img {
 }
 
 .stat-label {
-  font-size: 0.72rem;
+  font-size: 1rem;
   color: #5a4a63;
   line-height: 1.3;
 }
@@ -793,7 +793,6 @@ img {
    ========================================================= */
 @media (min-width: 768px) {
   .hero-title { font-size: 3.4rem; }
-  .hero-text { font-size: 1.05rem; }
   .section-title { font-size: 2rem; }
   .section-title-light { font-size: 1.75rem; }
   .countdown-grid { max-width: 560px; gap: 1rem; }
