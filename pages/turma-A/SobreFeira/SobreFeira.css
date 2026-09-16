@@ -111,7 +111,7 @@ main {
 
     color: #5d5262;
 
-    font-size: 18px;
+    font-size: 16px;
 
     line-height: 1.7;
 }
@@ -174,6 +174,8 @@ main {
 
     color: #6b6070;
 
+    font-size: 16px;
+
     line-height: 1.4;
 }
 
@@ -194,7 +196,7 @@ section h2 {
 
     color: #5d5262;
 
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.8;
 }
@@ -251,6 +253,8 @@ section h2 {
     margin: 0;
 
     color: #68616b;
+
+    font-size: 16px;
 
     line-height: 1.5;
 }
@@ -323,6 +327,8 @@ section h2 {
 
     color: #68616b;
 
+    font-size: 16px;
+
     line-height: 1.6;
 }
 
@@ -357,6 +363,8 @@ section h2 {
     margin-bottom: 18px;
 
     color: #5d5262;
+
+    font-size: 16px;
 
     line-height: 1.5;
 }
@@ -465,6 +473,8 @@ section h2 {
 
     color: #68616b;
 
+    font-size: 16px;
+
     line-height: 1.6;
 }
 
@@ -534,10 +544,6 @@ section h2 {
         font-size: 39px;
     }
 
-    .introducao p {
-        font-size: 16px;
-    }
-
     .estatisticas {
         grid-template-columns: repeat(2, 1fr);
 
@@ -556,10 +562,6 @@ section h2 {
 
     section h2 {
         font-size: 29px;
-    }
-
-    .historia p {
-        font-size: 16px;
     }
 
     .card-missao {
@@ -590,7 +592,5 @@ section h2 {
 
     .faq-pergunta {
         padding: 19px 16px;
-
-        font-size: 14px;
     }
 }

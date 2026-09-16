@@ -312,7 +312,7 @@ p {
     color: #69636d;
     font-family: "Afacad", sans-serif;
 
-    font-size: 13px;
+    font-size: 16px;
 
     text-align: center;
 }
@@ -383,7 +383,7 @@ p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -610,7 +610,7 @@ p {
     color: #311041;
     font-family: "Ubuntu", sans-serif;
 
-    font-size: 13px;
+    font-size: 16px;
 
     line-height: 1.4;
 }
@@ -662,10 +662,6 @@ p {
         padding-right: 15px;
     }
 
-    .history-text {
-        font-size: 16px;
-    }
-
     .stat-card {
         min-height: 72px;
     }
@@ -676,10 +672,6 @@ p {
 
     .course-info h3 {
         font-size: 18px;
-    }
-
-    .course-info p {
-        font-size: 14px;
     }
 
     .gallery-image {
@@ -696,7 +688,6 @@ p {
 @media (min-width: 600px) {
 
     body {
-        max-width: 600px;
         margin: 0 auto;
 
         box-shadow:
@@ -724,10 +715,6 @@ p {
         font-size: 26px;
     }
 
-    .history-text {
-        font-size: 17px;
-    }
-
     .statistics {
         gap: 12px;
     }
@@ -738,10 +725,6 @@ p {
 
     .stat-card strong {
         font-size: 20px;
-    }
-
-    .stat-card span {
-        font-size: 13px;
     }
 
     .course-card {
@@ -756,10 +739,6 @@ p {
 
     .course-info h3 {
         font-size: 18px;
-    }
-
-    .course-info p {
-        font-size: 14px;
     }
 
     .gallery-image {
@@ -786,10 +765,6 @@ p {
 ========================================================= */
 
 @media (min-width: 900px) {
-
-    body {
-        max-width: 700px;
-    }
 
     .hero {
         height: 320px; /* era 280px */
