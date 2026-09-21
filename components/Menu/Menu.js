@@ -4,15 +4,16 @@ class Menu extends HTMLElement {
       <nav>
         <button class="hamburgerBtn"></button>
         <ul class="linksMenu-container">
+                  <li class="linkMenu"><a class="linkMenu-container" href="/index.html">Home</a></li>
+
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/Projetos/Projetos.html">Projetos</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/ProjetosVisitados/ProjetosVisitados.html">Projetos Visitados</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/Ranking/Ranking.html">Ranking</a></li>
-          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Votacao/Votacao.html">Votação</a></li>
-          <li class="linkMenu"><a class="linkMenu-container" href="/index.html">Home</a></li>
+
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/Mapa/mapa.html">Mapa</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreEtec/sobreEtec.html">Sobre a Etec</a></li>
           <li class="linkMenu"><a class="linkMenu-container" href="/pages/turma-A/SobreFeira/sobreFeira.html">Sobre a Feira</a></li>
-          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Tipo_visitante/tipo_visitante.html">Tipo de Usuário</a></li>
+          <li class="linkMenu"><a class="linkMenu-container" href="/pages/Tipo_visitante/tipo_visitante.html">Entrar</a></li>
         </ul>
       </nav>
     `;
@@ -28,3 +29,6 @@ class Menu extends HTMLElement {
 }
 
 customElements.define('menu-component', Menu);
+
+
+          // <li class="linkMenu"><a class="linkMenu-container" href="/pages/Votacao/Votacao.html">Votação</a></li> 

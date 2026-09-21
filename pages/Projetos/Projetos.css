@@ -11,6 +11,52 @@ body {
 }
 
 
+.ranking-header {
+    width: 100%;
+    margin-bottom: 1px;
+    margin-top: 40px;
+    padding: 2.5%;
+    box-sizing: border-box;
+
+}
+
+
+/* Breadcrumb */
+
+.ranking-header__breadcrumb {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 28px;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 18px;
+
+    color: #777;
+}
+
+.ranking-header__breadcrumb span:nth-child(2) {
+    margin: 0 4px;
+}
+
+.ranking-header__content h1 {
+    margin: 0;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+
+    color: #37134d;
+}
+
+.ranking-header__content p {
+    margin: 4px 0 0;
+
+    font-family: "Afacad", sans-serif;
+    font-size: 20px;
+
+    color: #37134d;
+}
 /* ============================= */
 /* PÁGINA */
 /* ============================= */
@@ -145,8 +191,6 @@ a {
 /* BOTÃO */
 /* ============================= */
 
-.filtrocurso {
-}
 
 
 .filtro {
