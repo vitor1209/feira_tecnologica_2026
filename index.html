@@ -27,8 +27,13 @@
     <!-- Custom CSS -->
     <link href="Index.css" rel="stylesheet" />
     <link href="Index-home.css" rel="stylesheet" />
+
+    <!-- CSS dos Componentes -->
     <link rel="stylesheet" href="../../../components/Menu/Menu.css" />
+    <link rel="stylesheet" href="../../components/ODS/OdsTags.css">
+    <link rel="stylesheet" href="../../components/Card/Card.css">
   </head>
+
   <body>
     <menu-component></menu-component>
 
@@ -104,93 +109,9 @@
           <p class="eyebrow">Destaques</p>
           <h2 class="section-title">Projetos em Destaque</h2>
 
-          <div class="row justify-content-center g-4 project-grid">
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="project-card reveal" data-anim="fade-up">
-                <div class="project-thumb">
-                  <span class="ods-badge ods-red">ODS 4</span>
-                  <span class="ods-badge ods-orange">ODS 9</span>
-                </div>
-                <div class="project-body text-start">
-                  <h3 class="project-title">Nome do projeto</h3>
-                  <p class="project-subtitle">Subtítulo</p>
-                  <p class="project-meta">
-                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
-                    Bloco: A
-                  </p>
-                  <p class="project-rating">
-                    Sua avaliação:
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star star-off"></i>
-                  </p>
-                  <button type="button" class="btn btn-primary-c w-100">
-                    Ver detalhes
-                  </button>
-                </div>
-              </article>
-            </div>
+          <div id="lista-projetos" class="row justify-content-center g-4 project-grid"></div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="project-card reveal" data-anim="zoom-in">
-                <div class="project-thumb">
-                  <span class="ods-badge ods-red">ODS 4</span>
-                  <span class="ods-badge ods-orange">ODS 9</span>
-                </div>
-                <div class="project-body text-start">
-                  <h3 class="project-title">Nome do projeto</h3>
-                  <p class="project-subtitle">Subtítulo</p>
-                  <p class="project-meta">
-                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
-                    Bloco: A
-                  </p>
-                  <p class="project-rating">
-                    Sua avaliação:
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star star-off"></i>
-                  </p>
-                  <button type="button" class="btn btn-primary-c w-100">
-                    Ver detalhes
-                  </button>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="project-card reveal" data-anim="slide-left">
-                <div class="project-thumb">
-                  <span class="ods-badge ods-red">ODS 4</span>
-                  <span class="ods-badge ods-orange">ODS 9</span>
-                </div>
-                <div class="project-body text-start">
-                  <h3 class="project-title">Nome do projeto</h3>
-                  <p class="project-subtitle">Subtítulo</p>
-                  <p class="project-meta">
-                    Informática para Internet &nbsp;&nbsp; Sala: 2A &nbsp;&nbsp;
-                    Bloco: A
-                  </p>
-                  <p class="project-rating">
-                    Sua avaliação:
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star-fill star-on"></i>
-                    <i class="bi bi-star star-off"></i>
-                  </p>
-                  <button type="button" class="btn btn-primary-c w-100">
-                    Ver detalhes
-                  </button>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <a href="#" class="see-all-link"
+          <a href="pages/Projetos/Projetos.html" class="see-all-link"
             >Ver todos os projetos <i class="bi bi-arrow-right"></i
           ></a>
         </div>
@@ -294,41 +215,27 @@
 
           <ol class="schedule-timeline list-unstyled">
             <li class="schedule-item">
-              <span class="schedule-time">08h30</span>
-              <span class="schedule-dot" aria-hidden="true"></span>
-              <span class="schedule-content">Abertura das portas</span>
-            </li>
-            <li class="schedule-item">
               <span class="schedule-time">09h00</span>
               <span class="schedule-dot" aria-hidden="true"></span>
+              <span class="schedule-content">Organização dos estandes</span>
+            </li>
+            <li class="schedule-item">
+              <span class="schedule-time">10h00</span>
+              <span class="schedule-dot" aria-hidden="true"></span>
               <span class="schedule-content"
-                >Exposição dos Projetos nas salas</span
+                >Abertura dos portões e exposição dos Projetos nas salas</span
               >
             </li>
             <li class="schedule-item">
-              <span class="schedule-time">13h00</span>
+              <span class="schedule-time">15h00</span>
               <span class="schedule-dot" aria-hidden="true"></span>
-              <span class="schedule-content">Intervalo para Almoço</span>
+              <span class="schedule-content">Fim da exposição dos estandes e Fechamento dos portões</span>
             </li>
             <li class="schedule-item">
-              <span class="schedule-time">13h30</span>
+              <span class="schedule-time">Até 16h00</span>
               <span class="schedule-dot" aria-hidden="true"></span>
               <span class="schedule-content"
-                >Oficina: no Auditório: Grupo X</span
-              >
-            </li>
-            <li class="schedule-item">
-              <span class="schedule-time">13h30</span>
-              <span class="schedule-dot" aria-hidden="true"></span>
-              <span class="schedule-content"
-                >Oficina: no Auditório: Grupo X</span
-              >
-            </li>
-            <li class="schedule-item">
-              <span class="schedule-time">13h30</span>
-              <span class="schedule-dot" aria-hidden="true"></span>
-              <span class="schedule-content"
-                >Oficina: no Auditório: Grupo X</span
+                >Desmontagem dos estandes</span
               >
             </li>
           </ol>
@@ -365,7 +272,7 @@
         <div class="container text-center">
           <div class="vote-star"><i class="bi bi-star-fill"></i></div>
           <h2 class="vote-title">Vote no seu<br />projeto favorito</h2>
-          <a href="#" class="btn btn-primary-c"
+          <a href="pages/Votacao/Votacao.html" class="btn btn-primary-c"
             >Votar agora <i class="bi bi-arrow-right"></i
           ></a>
         </div>
@@ -379,10 +286,14 @@
         <p class="footer-small">Etec Professora Maria Cristina Medeiros</p>
       </div>
     </footer>
+    
+    <!-- Componentes -->
+    <script src="../../components/ODS/OdsTags.js"></script>
+    <script src="../../components/Card/Card.js"></script>
+    <script src="../../../components/Menu/Menu.js"></script>
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="Index-home.js"></script>
-    <script src="../../../components/Menu/Menu.js"></script>
   </body>
 </html>
