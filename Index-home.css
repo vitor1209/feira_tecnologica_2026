@@ -777,7 +777,7 @@ img {
    ========================================================= */
 .site-footer {
   background-color: var(--primary-dark);
-  color: var(--light-purple);
+  color: #ffffff;
   padding: 2rem 0;
   font-size: 0.85rem;
 }
@@ -816,4 +816,108 @@ img {
   .hero-title { font-size: 2.1rem; }
   .countdown-number { font-size: 1.3rem; }
   .countdown-label { font-size: 0.62rem; }
+}
+
+/* =========================================================
+   CARDS DE PROJETOS — PADRONIZAÇÃO COM /pages/Projetos
+   ========================================================= */
+
+/* O Bootstrap usa .row como flex container. Na home,
+   o container dos cards deve seguir o grid da página Projetos. */
+#lista-projetos.project-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 260px));
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+
+  margin: 0 auto 1.5rem;
+  padding: 0;
+}
+
+/* Impede as regras de coluna do Bootstrap de interferirem
+   nos cards gerados dinamicamente. */
+#lista-projetos.project-grid > * {
+  width: 260px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* O card da home usa exatamente as dimensões e espaçamentos
+   definidos pelo componente Card.css. */
+#lista-projetos .card-projeto {
+  width: 260px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Garante que o CSS geral da home não altere a tipografia
+   específica do componente Card. */
+#lista-projetos .card-conteudo {
+  text-align: left;
+}
+
+#lista-projetos .card-titulo {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+#lista-projetos .card-subtitulo {
+  font-family: "Afacad", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #444;
+  margin: 4px 0 10px;
+}
+
+#lista-projetos .card-curso {
+  font-family: "Afacad", sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #333;
+  margin: 0;
+}
+
+#lista-projetos .card-local {
+  font-family: "Afacad", sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+  color: #333;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+#lista-projetos .card-botao {
+  font-family: "Afacad", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsividade igual à página Projetos */
+@media (max-width: 600px) {
+  #lista-projetos.project-grid {
+    grid-template-columns: minmax(0, 260px);
+  }
+
+  #lista-projetos.project-grid > * {
+    width: 260px;
+  }
+}
+
+@media (max-width: 300px) {
+  #lista-projetos.project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #lista-projetos.project-grid > * {
+    width: 100%;
+  }
 }

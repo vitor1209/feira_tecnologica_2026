@@ -2,6 +2,27 @@
 // FEIRA TECNOLÓGICA 2026 — script.js
 // =========================================================
 
+
+
+/*                             *
+ *  ------  Elementos  ------  *
+ *                             */
+
+const container =
+    document.getElementById("lista-projetos");
+
+// const h2AlunosInscritos = document.getElementById("alunos-inscritos");
+// const h2ProjetosInscritos = document.getElementById("projetos-inscritos");
+
+// const qntProjetos = apiFetch('/projetos/qnt');
+// const qntAlunos = qntProjetos * 5;
+
+// h2AlunosInscritos.innerHTML = `${qntAlunos}`
+// h2ProjetosInscritos.innerHTML = `${qntProjetos}`
+//  ---------------- Quando API disponível ------------------  //
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
   /* =======================================================
@@ -84,42 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
   updateCountdown();
   const countdownInterval = setInterval(updateCountdown, 1000);
 
-  /* =======================================================
-     2. MENU HAMBÚRGUER ANIMADO (3 barras → X)
-     ======================================================= */
-
-  const menuToggle = document.getElementById('menuToggle');
-  const offcanvasEl = document.getElementById('mainMenu');
-
-  if (menuToggle && offcanvasEl) {
-    // O Bootstrap controla a abertura/fechamento do offcanvas via data-attributes.
-    // Aqui apenas sincronizamos a classe "active" do botão com o estado do offcanvas
-    // para animar as barras em um X.
-    offcanvasEl.addEventListener('show.bs.offcanvas', function () {
-      menuToggle.classList.add('active');
-      menuToggle.setAttribute('aria-expanded', 'true');
-    });
-
-    offcanvasEl.addEventListener('hide.bs.offcanvas', function () {
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
-  }
-
-  // Fecha o menu offcanvas ao clicar em um link de navegação
-  const menuLinks = document.querySelectorAll('#mainMenu .nav-link-custom');
-
-  menuLinks.forEach(function (link) {
-    link.addEventListener('click', function () {
-      const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-      if (bsOffcanvas) {
-        bsOffcanvas.hide();
-      }
-    });
-  });
 
   /* =======================================================
-     3. ANIMAÇÕES DE ENTRADA DIFERENTES PARA CADA CARD
+     2. ANIMAÇÕES DE ENTRADA DIFERENTES PARA CADA CARD
      ======================================================= */
 
   const revealCards = document.querySelectorAll('.reveal');
@@ -147,3 +135,73 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+
+/*                                                 *
+ *  -------  Carregar Projetos na pagina  -------  *
+ *                                                 */
+
+const projetos = [
+
+    {
+        nome: "Projeto Orion",
+        subtitulo: "Luva tecnológica musical",
+        curso: "Informática para Internet",
+        sala: "2A",
+        bloco: "A",
+        imagem: "../../img/orion.jpg",
+        ods: [4, 9],
+        link: "#",
+        votos: 7
+    },
+
+    {
+        nome: "EcoTech",
+        subtitulo: "Tecnologia sustentável",
+        curso: "Administração",
+        sala: "3B",
+        bloco: "B",
+        imagem: "../../img/ecotech.jpg",
+        ods: [11, 12],
+        link: "#",
+        votos: 6
+    },
+
+    {
+        nome: "Viridis",
+        subtitulo: "Horta em Gamificação",
+        curso: "Informática para Internet",
+        sala: "3C",
+        bloco: "B",
+        imagem: "../../img/viridis.jpg",
+        ods: [11, 12],
+        link: "#",
+        votos: 5
+    }
+
+];
+
+function renderizarProjetos(lista) {
+
+    container.innerHTML = "";
+
+    lista.forEach(projeto => {
+        container.innerHTML +=
+            criarCard(projeto);
+    });
+
+    if (lista.length === 0) {
+        container.innerHTML = `
+            <p class="nenhum-projeto">
+                Nenhum projeto encontrado.
+            </p>
+        `;
+    }
+}
+
+
+/*                                 *
+ *  -------  Inicializar  -------  *
+ *                                 */
+
+renderizarProjetos(projetos);
