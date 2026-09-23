@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
      ======================================================= */
 
   // Data/hora alvo: 26 de Setembro de 2026, 09h00 (horário de Brasília, UTC-3)
-  const targetDate = new Date('2026-09-26T09:00:00-03:00').getTime();
+  const targetDate = new Date('2026-09-26T09:00:00-04:00').getTime();
 
   const daysEl = document.getElementById('cd-days');
   const hoursEl = document.getElementById('cd-hours');
