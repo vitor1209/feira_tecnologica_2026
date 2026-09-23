@@ -11,6 +11,17 @@
 const container =
     document.getElementById("lista-projetos");
 
+// const h2AlunosInscritos = document.getElementById("alunos-inscritos");
+// const h2ProjetosInscritos = document.getElementById("projetos-inscritos");
+
+// const qntProjetos = apiFetch('/projetos/qnt');
+// const qntAlunos = qntProjetos * 5;
+
+// h2AlunosInscritos.innerHTML = `${qntAlunos}`
+// h2ProjetosInscritos.innerHTML = `${qntProjetos}`
+//  ---------------- Quando API disponível ------------------  //
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -140,7 +151,8 @@ const projetos = [
         bloco: "A",
         imagem: "../../img/orion.jpg",
         ods: [4, 9],
-        link: "#"
+        link: "#",
+        votos: 7
     },
 
     {
@@ -151,7 +163,8 @@ const projetos = [
         bloco: "B",
         imagem: "../../img/ecotech.jpg",
         ods: [11, 12],
-        link: "#"
+        link: "#",
+        votos: 6
     },
 
     {
@@ -162,7 +175,8 @@ const projetos = [
         bloco: "B",
         imagem: "../../img/viridis.jpg",
         ods: [11, 12],
-        link: "#"
+        link: "#",
+        votos: 5
     }
 
 ];
