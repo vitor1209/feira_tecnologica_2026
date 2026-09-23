@@ -351,23 +351,34 @@ p {
 }
 
 .course-icon {
-    width: 36px; /* era 25px */
-    height: 36px; /* era 25px */
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
 
     flex-shrink: 0;
 
-    border-radius: 8px; /* era 6px */
-
-    background: var(--purple);
-
-    color: white;
+    border-radius: 8px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    font-size: 18px; /* era 12px */
+    overflow: hidden;
+
+    background: transparent;
+}
+
+.course-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
 }
 
 .course-info h3 {
@@ -731,28 +742,17 @@ p {
         min-height: 84px;
     }
 
-    .course-icon {
-    width: 52px;
-    height: 52px;
-    flex-shrink: 0;
-    border-radius: 8px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-    }
-
-.course-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    }
-
     .course-info h3 {
-        font-size: 18px;
+    color: #311041;
+    font-family: "Afacad", sans-serif;
+
+    font-size: clamp(17px, 4.5vw, 20px);
+
+    margin-bottom: 5px;
+    }
+
+    .course-info p {
+    font-size: clamp(14px, 3.8vw, 16px);
     }
 
     .gallery-image {
