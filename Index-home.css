@@ -777,7 +777,7 @@ img {
    ========================================================= */
 .site-footer {
   background-color: var(--primary-dark);
-  color: var(--light-purple);
+  color: #ffffff;
   padding: 2rem 0;
   font-size: 0.85rem;
 }
