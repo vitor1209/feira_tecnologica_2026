@@ -262,29 +262,28 @@ a {
     position: absolute;
 
     top: calc(100% + 4px);
-
     left: 0;
 
     width: 100%;
-
     box-sizing: border-box;
 
     padding: 4px;
 
     display: none;
-
     flex-direction: column;
-
     gap: 2px;
 
     background: #ffffff;
-
     border-radius: 10px;
 
     box-shadow:
         0 3px 10px rgba(0, 0, 0, 0.18);
 
     z-index: 100;
+
+    /* 👇 CONTROLE DA ALTURA */
+    max-height: 180px;
+    overflow-y: auto;
 }
 
 
